@@ -11,3 +11,7 @@
     @include('potensi_component.header')
 
 @endsection
+
+@section('footer')
+    @include('component.footer')
+@endsection

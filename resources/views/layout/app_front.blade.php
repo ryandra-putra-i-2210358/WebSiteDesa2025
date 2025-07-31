@@ -21,6 +21,15 @@
     </div>
   </main>
 
+
+  <footer class="bg-gray-900 text-white text-sm pt-10">
+    @yield('footer')
+  </footer>
+
+
+  <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+
+
   
 
 </body>

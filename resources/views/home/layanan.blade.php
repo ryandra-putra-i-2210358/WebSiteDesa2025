@@ -6,3 +6,6 @@
     @include('component.navbar')
 @endsection
 
+@section('footer')
+    @include('component.footer')
+@endsection

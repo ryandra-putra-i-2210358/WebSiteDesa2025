@@ -9,4 +9,12 @@
 
 @section('content')
     @include('beranda_component.jumbo')
+    @include('beranda_component.component2')
+    @include('beranda_component.component3')
+@endsection
+
+
+
+@section('footer')
+    @include('component.footer')
 @endsection

@@ -10,3 +10,7 @@
     @include('berita_component.header')
 
 @endsection
+
+@section('footer')
+    @include('component.footer')
+@endsection
