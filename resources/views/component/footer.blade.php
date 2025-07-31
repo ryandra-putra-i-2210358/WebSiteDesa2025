@@ -2,11 +2,11 @@
 
       <!-- Logo dan Alamat -->
       <div>
-        <div class="flex items-center gap-2 mb-3">
-          <img src="/img/logo.png" alt="Logo" class="w-10 h-10">
+        <div class="flex items-center gap-2 mb-10">
+          <img src="{{ asset('img/logosvg.png') }}" alt="Logo" class="w-10 h-15">
           <div>
-            <p class="font-bold text-lg leading-tight">LHPD</p>
-            <p class="-mt-1 text-sm text-white">Desa Tukadaya</p>
+            {{-- <p class="font-bold text-lg leading-tight">LHPD</p> --}}
+            <p class="-mt-1 text-sm text-white font-semibold">Desa Tajur Halang</p>
           </div>
         </div>
         <p class="text-white mb-4 leading-relaxed">
@@ -21,7 +21,7 @@
       </div>
 
       <!-- Kontak Desa -->
-      <div>
+      <div class="ml-[70px]">
         <h3 class="font-semibold text-lg mb-3">Kontak Desa</h3>
         <ul class="space-y-2">
           <li><i class="fab fa-whatsapp mr-2 text-green-500"></i>0365 788 899</li>
@@ -33,7 +33,7 @@
       </div>
 
       <!-- Link Tautan -->
-      <div>
+      <div class="ml-[80px]">
         <h3 class="font-semibold text-lg mb-3">Link Tautan</h3>
         <ul class="space-y-2">
           <li><a href="#" class="hover:text-green-500">Kemendesa</a></li>
