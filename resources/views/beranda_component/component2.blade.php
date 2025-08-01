@@ -4,7 +4,7 @@
     <!-- Kiri: Konten Teks -->
     <div class="md:w-1/2">
       <p class="text-green-600 font-semibold tracking-widest uppercase mb-2">Selamat Datang Di</p>
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Desa Wisata Tajur Halang.</h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Desa Tajur Halang.</h2>
       <p class="text-gray-700 mb-4">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim ligula venenatis velit semper, et viverra leo tempus.
       </p>

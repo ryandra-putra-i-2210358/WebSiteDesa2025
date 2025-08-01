@@ -140,7 +140,7 @@
           <!-- Tambah item lainnya sesuai kebutuhan -->
         </ul>
         <div class="px-5 py-3 text-green-600 text-sm font-semibold border-t border-gray-200 text-right hover:underline">
-          <a href="#">Lihat Semua →</a>
+          <a href="{{ route('potensi')}}">Lihat Semua →</a>
         </div>
       </div>
 

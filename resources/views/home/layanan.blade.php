@@ -6,6 +6,12 @@
     @include('component.navbar')
 @endsection
 
+@section('content')
+    @include('layanan_component.header')
+    @include('layanan_component.component1')
+
+@endsection
+
 @section('footer')
     @include('component.footer')
 @endsection

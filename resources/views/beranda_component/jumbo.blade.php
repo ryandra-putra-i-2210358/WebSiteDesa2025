@@ -18,31 +18,39 @@
 </section>
 
 <!-- Menu Ikon -->
-<section class="bg-white py-8 mt-12">
-    <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-6 gap-4 text-center">
-    <a href="#" class="p-4 border rounded-xl hover:shadow transition">
-        <div class="text-pink-600 text-2xl">🎯</div>
-        <p class="mt-2 font-medium">Profile Desa</p>
+<section class="bg-white py-8 mt-3">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-6 gap-4 text-center">
+    
+    <!-- CARD -->
+    <a href="#" class="group p-4 border rounded-xl transition transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:border-green-500 duration-300">
+      <div class="text-green-600 text-2xl group-hover:scale-125 transition duration-300">🎯</div>
+      <p class="mt-2 font-medium text-gray-800 group-hover:text-green-600 transition">Profile Desa</p>
     </a>
-    <div class="p-4 border rounded-xl hover:shadow transition">
-        <div class="text-pink-600 text-2xl">📊</div>
-        <p class="mt-2 font-medium">Infografis</p>
-    </div>
-    <div class="p-4 border rounded-xl hover:shadow transition">
-        <div class="text-pink-600 text-2xl">🏢</div>
-        <p class="mt-2 font-medium">Bumdes</p>
-    </div>
-    <div class="p-4 border rounded-xl hover:shadow transition">
-        <div class="text-pink-600 text-2xl">🌾</div>
-        <p class="mt-2 font-medium">Potensi</p>
-    </div>
-    <div class="p-4 border rounded-xl hover:shadow transition">
-        <div class="text-pink-600 text-2xl">📨</div>
-        <p class="mt-2 font-medium">Layanan Desa</p>
-    </div>
-    <div class="p-4 border rounded-xl hover:shadow transition">
-        <div class="text-pink-600 text-2xl">📰</div>
-        <p class="mt-2 font-medium">Berita</p>
-    </div>
-    </div>
+
+    <a href="#" class="group p-4 border rounded-xl transition transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:border-green-500 duration-300">
+      <div class="text-green-600 text-2xl group-hover:scale-125 transition duration-300">📊</div>
+      <p class="mt-2 font-medium text-gray-800 group-hover:text-green-600 transition">Infografis</p>
+    </a>
+
+    <a href="#" class="group p-4 border rounded-xl transition transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:border-green-500 duration-300">
+      <div class="text-green-600 text-2xl group-hover:scale-125 transition duration-300">🏢</div>
+      <p class="mt-2 font-medium text-gray-800 group-hover:text-green-600 transition">Bumdes</p>
+    </a>
+
+    <a href="{{ route('potensi') }}" class="group p-4 border rounded-xl transition transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:border-green-500 duration-300">
+      <div class="text-green-600 text-2xl group-hover:scale-125 transition duration-300">🌾</div>
+      <p class="mt-2 font-medium text-gray-800 group-hover:text-green-600 transition">Potensi</p>
+    </a>
+
+    <a href="#" class="group p-4 border rounded-xl transition transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:border-green-500 duration-300">
+      <div class="text-green-600 text-2xl group-hover:scale-125 transition duration-300">📨</div>
+      <p class="mt-2 font-medium text-gray-800 group-hover:text-green-600 transition">Layanan Desa</p>
+    </a>
+
+    <a href="#" class="group p-4 border rounded-xl transition transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:border-green-500 duration-300">
+      <div class="text-green-600 text-2xl group-hover:scale-125 transition duration-300">📰</div>
+      <p class="mt-2 font-medium text-gray-800 group-hover:text-green-600 transition">Berita</p>
+    </a>
+    
+  </div>
 </section>
