@@ -1,14 +1,15 @@
 @extends('layout.app_front')
 
-@section('title', 'Layanan Desa')
+@section('title', 'Infografis Tajur Halang')
 
 @section('navbar')
     @include('component.navbar')
 @endsection
 
 @section('content')
-    @include('layanan_component.header')
-    @include('layanan_component.component1')
+
+    @include('infografis_component.header')
+ 
 
 @endsection
 

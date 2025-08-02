@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <title>@yield('title')</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{{ asset('img/logosvg.png') }}" type="image/png">
+
   @vite('resources/tailwind/app.css') <!-- Sesuaikan jika pakai Laravel Vite -->
+  
 </head>
 
 <body class="font-sans text-gray-800">

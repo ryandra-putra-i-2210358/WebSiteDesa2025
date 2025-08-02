@@ -18,11 +18,17 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', [HomeController::class, 'index'])->name('index');
-Route::get('/potensi', [HomeController::class, 'potensi'])->name('potensi');
-Route::get('/pengumuman', [HomeController::class, 'pengumuman'])->name('pengumuman');
-Route::get('/berita', [HomeController::class, 'berita'])->name('berita');
-Route::get('/layanan', [HomeController::class, 'layanan'])->name('layanan');
+Route::controller(HomeController::class)->group(function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/potensi', 'potensi')->name('potensi');
+    Route::get('/pengumuman', 'pengumuman')->name('pengumuman');
+    Route::get('/berita', 'berita')->name('berita');
+    Route::get('/layanan', 'layanan')->name('layanan');
+    Route::get('/profiledesa', 'profiledesa')->name('profiledesa');
+    Route::get('/infografis', 'infografis')->name('infografis');
+    Route::get('/bumdes', 'bumdes')->name('bumdes');
+    Route::get('/gallery', 'gallery')->name('gallery');
+});
 
 
 

@@ -21,4 +21,16 @@ class HomeController extends Controller
     public function layanan(){
         return view('home.layanan');
     }
+    public function profiledesa(){
+        return view('home.profiledesa');
+    }
+    public function infografis(){
+        return view('home.infografis');
+    }
+    public function bumdes(){
+        return view('home.bumdes');
+    }
+    public function gallery(){
+        return view('home.gallery');
+    }
 }

@@ -1,14 +1,13 @@
 @extends('layout.app_front')
 
-@section('title', 'Layanan Desa')
+@section('title', 'Profile Tajur Halang')
 
 @section('navbar')
     @include('component.navbar')
 @endsection
 
 @section('content')
-    @include('layanan_component.header')
-    @include('layanan_component.component1')
+    @include('profiledesa_component.header')
 
 @endsection
 

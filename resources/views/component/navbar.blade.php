@@ -32,9 +32,10 @@
         <div
           class="absolute right-0 mt-2 w-48 z-50 bg-white rounded-lg shadow-lg ring-1 ring-black/5
                  opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 origin-top-right">
-          <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Info</a>
-          <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">List Desa</a>
-          <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Jadwal</a>
+          <a href="{{ route('profiledesa')}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Profile Desa</a>
+          <a href="{{ route('infografis')}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Info Grafis</a>
+          <a href="{{ route('bumdes')}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Bumdes</a>
+          <a href="{{ route('gallery')}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Gallery</a>
         </div>
       </div>
 
@@ -66,9 +67,10 @@
           </svg>
         </button>
         <div id="info-submenu" class="hidden pl-4">
-          <a href="#" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 text-sm">Info</a>
-          <a href="#" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 text-sm">List Desa</a>
-          <a href="#" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 text-sm">Jadwal</a>
+          <a href="{{ route('profiledesa')}}" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 text-sm">Profile Desa</a>
+          <a href="{{ route('infografis')}}" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 text-sm">Info Grafis</a>
+          <a href="{{ route('bumdes')}}" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 text-sm">Bumdes</a>
+          <a href="{{ route('gallery')}}" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 text-sm">Gallery</a>
         </div>
       </div>
 

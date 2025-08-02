@@ -1,6 +1,6 @@
 @extends('layout.app_front')
 
-@section('title', 'Home')
+@section('title', 'Beranda')
 
 @section('navbar')
     @include('component.navbar')

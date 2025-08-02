@@ -22,17 +22,17 @@
   <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-6 gap-4 text-center">
     
     <!-- CARD -->
-    <a href="#" class="group p-4 border rounded-xl transition transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:border-green-500 duration-300">
+    <a href="{{ route('profiledesa')}}" class="group p-4 border rounded-xl transition transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:border-green-500 duration-300">
       <div class="text-green-600 text-2xl group-hover:scale-125 transition duration-300">🎯</div>
       <p class="mt-2 font-medium text-gray-800 group-hover:text-green-600 transition">Profile Desa</p>
     </a>
 
-    <a href="#" class="group p-4 border rounded-xl transition transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:border-green-500 duration-300">
+    <a href="{{ route('infografis')}}" class="group p-4 border rounded-xl transition transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:border-green-500 duration-300">
       <div class="text-green-600 text-2xl group-hover:scale-125 transition duration-300">📊</div>
       <p class="mt-2 font-medium text-gray-800 group-hover:text-green-600 transition">Infografis</p>
     </a>
 
-    <a href="#" class="group p-4 border rounded-xl transition transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:border-green-500 duration-300">
+    <a href="{{ route('bumdes')}}" class="group p-4 border rounded-xl transition transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:border-green-500 duration-300">
       <div class="text-green-600 text-2xl group-hover:scale-125 transition duration-300">🏢</div>
       <p class="mt-2 font-medium text-gray-800 group-hover:text-green-600 transition">Bumdes</p>
     </a>
@@ -42,12 +42,12 @@
       <p class="mt-2 font-medium text-gray-800 group-hover:text-green-600 transition">Potensi</p>
     </a>
 
-    <a href="#" class="group p-4 border rounded-xl transition transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:border-green-500 duration-300">
+    <a href="{{ route('layanan')}}" class="group p-4 border rounded-xl transition transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:border-green-500 duration-300">
       <div class="text-green-600 text-2xl group-hover:scale-125 transition duration-300">📨</div>
       <p class="mt-2 font-medium text-gray-800 group-hover:text-green-600 transition">Layanan Desa</p>
     </a>
 
-    <a href="#" class="group p-4 border rounded-xl transition transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:border-green-500 duration-300">
+    <a href="{{ route('berita')}}" class="group p-4 border rounded-xl transition transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:border-green-500 duration-300">
       <div class="text-green-600 text-2xl group-hover:scale-125 transition duration-300">📰</div>
       <p class="mt-2 font-medium text-gray-800 group-hover:text-green-600 transition">Berita</p>
     </a>
