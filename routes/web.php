@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,17 @@ Route::prefix('/')->controller(HomeController::class)->group(function () {
     Route::get('/umkm', 'umkm')->name('home.umkm');
     Route::get('/wisata', 'wisata')->name('home.wisata');
     Route::get('/potensilainya', 'potensilainya')->name('home.potensilainya');
+});
+
+
+
+Route::get('/logintjh', [AuthController::class, 'showLoginForm'])->name('logintjh');
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+
+Route::middleware(['auth', 'is_admin'])->group(function () {
+    Route::get('/admin/dashboard', function () { return view('back_site.dashboard'); })->name('admin.dashboard');
 });
 
 
