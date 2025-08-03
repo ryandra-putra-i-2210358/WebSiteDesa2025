@@ -1,7 +1,7 @@
 <header class="bg-white shadow-md">
   <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
     <!-- Logo -->
-    <a href="{{ route('index') }}" class="flex items-center space-x-2">
+    <a href="{{ route('home.index') }}" class="flex items-center space-x-2">
       <img src="{{ asset('img/logosvg.png') }}" alt="Logo" class="h-12 w-auto">
       <span class="text-lg text-gray-700 font-semibold">Desa Tajur Halang</span>
     </a>
@@ -17,7 +17,7 @@
 
     <!-- Navigation (Desktop) -->
     <nav class="hidden md:flex items-center space-x-6">
-      <a href="{{ route('index') }}" class="text-gray-700 hover:text-green-600 font-semibold">Beranda</a>
+      <a href="{{ route('home.index') }}" class="text-gray-700 hover:text-green-600 font-semibold">Beranda</a>
 
       <!-- Dropdown -->
       <div class="relative group">
@@ -32,21 +32,21 @@
         <div
           class="absolute right-0 mt-2 w-48 z-50 bg-white rounded-lg shadow-lg ring-1 ring-black/5
                  opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 origin-top-right">
-          <a href="{{ route('profiledesa')}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Profile Desa</a>
-          <a href="{{ route('infografis')}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Info Grafis</a>
-          <a href="{{ route('bumdes')}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Bumdes</a>
-          <a href="{{ route('gallery')}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Gallery</a>
+          <a href="{{ route('home.profiledesa')}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Profile Desa</a>
+          <a href="{{ route('home.infografis')}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Info Grafis</a>
+          <a href="{{ route('home.bumdes')}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Bumdes</a>
+          <a href="{{ route('home.gallery')}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Gallery</a>
         </div>
       </div>
 
-      <a href="{{ route('potensi') }}" class="text-gray-700 hover:text-green-600 font-semibold">Potensi Desa</a>
-      <a href="{{ route('pengumuman') }}" class="text-gray-700 hover:text-green-600 font-semibold">Pengumuman</a>
-      <a href="{{ route('berita') }}" class="text-gray-700 hover:text-green-600 font-semibold">Berita</a>
+      <a href="{{ route('home.potensi') }}" class="text-gray-700 hover:text-green-600 font-semibold">Potensi Desa</a>
+      <a href="{{ route('home.pengumuman') }}" class="text-gray-700 hover:text-green-600 font-semibold">Pengumuman</a>
+      <a href="{{ route('home.berita') }}" class="text-gray-700 hover:text-green-600 font-semibold">Berita</a>
     </nav>
 
     <!-- CTA -->
     <div class="hidden md:flex items-center">
-      <a href="{{ route('layanan') }}"
+      <a href="{{ route('home.layanan') }}"
          class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 transition">
         Layanan Desa
       </a>
@@ -56,7 +56,7 @@
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="md:hidden hidden border-t border-gray-100">
     <div class="px-4 py-3 space-y-2">
-      <a href="{{ route('index') }}" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 font-semibold">Beranda</a>
+      <a href="{{ route('home.index') }}" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 font-semibold">Beranda</a>
 
       <!-- Info Desa mobile dropdown -->
       <div>
@@ -67,18 +67,18 @@
           </svg>
         </button>
         <div id="info-submenu" class="hidden pl-4">
-          <a href="{{ route('profiledesa')}}" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 text-sm">Profile Desa</a>
-          <a href="{{ route('infografis')}}" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 text-sm">Info Grafis</a>
-          <a href="{{ route('bumdes')}}" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 text-sm">Bumdes</a>
-          <a href="{{ route('gallery')}}" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 text-sm">Gallery</a>
+          <a href="{{ route('home.profiledesa')}}" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 text-sm">Profile Desa</a>
+          <a href="{{ route('home.infografis')}}" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 text-sm">Info Grafis</a>
+          <a href="{{ route('home.bumdes')}}" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 text-sm">Bumdes</a>
+          <a href="{{ route('home.gallery')}}" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 text-sm">Gallery</a>
         </div>
       </div>
 
-      <a href="{{ route('potensi') }}" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 font-semibold">Potensi Desa</a>
-      <a href="{{ route('pengumuman') }}" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 font-semibold">Pengumuman</a>
-      <a href="{{ route('berita') }}" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 font-semibold">Berita</a>
+      <a href="{{ route('home.potensi') }}" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 font-semibold">Potensi Desa</a>
+      <a href="{{ route('home.pengumuman') }}" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 font-semibold">Pengumuman</a>
+      <a href="{{ route('home.berita') }}" class="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-50 font-semibold">Berita</a>
 
-      <a href="{{ route('layanan') }}"
+      <a href="{{ route('home.layanan') }}"
          class="block text-center bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 transition">
         Layanan Desa
       </a>

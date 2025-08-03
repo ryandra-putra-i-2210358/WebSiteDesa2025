@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <title>@yield('title')</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="{{ asset('img/logosvg.png') }}" type="image/png">
-
+  <link rel="stylesheet" href="{{ asset('css_nav/style.css')}}">
   @vite('resources/tailwind/app.css') <!-- Sesuaikan jika pakai Laravel Vite -->
+  <link rel="icon" href="{{ asset('img/logosvg.png') }}" sizes="32x32" type="image/png">
+
   
 </head>
 

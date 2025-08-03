@@ -13,7 +13,7 @@
         Aliquam est arcu, placerat pretium lectus at, venenatis vestibulum risus. Nam at ornare mi. 
         Morbi bibendum aliquam purus eu venenatis. Curabitur fringilla est risus, et molestie dui eleifend id.
       </p>
-      <a href="#" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition duration-300">
+      <a href="{{ route('home.profiledesa')}}" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition duration-300">
         Lihat Profile Desa
       </a>
     </div>
