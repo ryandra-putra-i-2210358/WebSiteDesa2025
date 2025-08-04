@@ -47,6 +47,86 @@
     </div>
   </div>
 
-  {{-- Grid Potensi (bisa lanjut isi kartu potensi di bawah sini) --}}
+  {{-- Konten Yang di SS DI BAWAH SINI --}}
+  {{-- Konten Tambahan --}}
+  <div class="max-w-7xl mx-auto px-4 pb-16 space-y-12 text-gray-800">
+
+    {{-- SEJARAH --}}
+    <section class="group p-4 border rounded-xl hover:border-green-500 duration-300">
+      <h3 class="text-2xl md:text-3xl font-bold mb-2">Sejarah</h3>
+      <p class="text-gray-700 leading-relaxed">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere mattis dolor, ut porttitor nulla sollicitudin quis.
+        Quisque placerat cursus ex. Morbi convallis elit sed feugiat molestie. Phasellus ornare augue nec nunc vehicula rhoncus.
+        Proin elit massa, pretium et convallis sit amet, venenatis et mauris. Phasellus in augue a tortor dictum fermentum.
+        Integer et mollis sem, nec posuere risus. Sed et molestie nulla, vel suscipit libero.
+      </p>
+      <br>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique eaque voluptas iste sunt, officia rerum, ipsa nesciunt doloribus laborum ea quaerat ab! Dolore adipisci minus quasi recusandae amet! Nesciunt, omnis!</p>
+      
+    </section>
+
+    {{-- VISI & MISI --}}
+    <section class="group p-4 border rounded-xl hover:border-green-500 duration-300">
+      <h3 class="text-2xl md:text-3xl font-bold mb-2">Visi </h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere mattis dolor, ut porttitor nulla sollicitudin quis.
+        Quisque placerat cursus ex. Morbi convallis elit sed feugiat molestie. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae rem veritatis, molestiae dolorem culpa incidunt eligendi aspernatur error nemo officia recusandae fugit doloribus minus pariatur dolore tenetur maxime neque quaerat? Phasellus ornare augue nec nunc vehicula rhoncus.
+      </p>
+    </section>
+    <section class="group p-4 border rounded-xl hover:border-green-500 duration-300">
+      <h3 class="text-2xl md:text-3xl font-bold mb-2">Misi</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere mattis dolor, ut porttitor nulla sollicitudin quis.
+        Quisque placerat cursus ex. Morbi convallis elit sed feugiat molestie. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae rem veritatis, molestiae dolorem culpa incidunt eligendi aspernatur error nemo officia recusandae fugit doloribus minus pariatur dolore tenetur maxime neque quaerat? Phasellus ornare augue nec nunc vehicula rhoncus.
+      </p>
+    </section>
+
+    {{-- DAFTAR NAMA KEPALA DESA --}}
+    <section class="group p-4 border rounded-xl hover:border-green-500 duration-300">
+      <h3 class="text-2xl md:text-3xl font-bold mb-2">Daftar Nama Kepala Desa</h3>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere mattis dolor, ut porttitor nulla sollicitudin quis.
+      </p>
+      <ul class="space-y-3">
+        <li class="flex items-start gap-2">
+          <span class="text-green-600 text-xl">✔</span>
+          <div>
+            <p class="font-semibold">DRS. Made Sing Nawang</p>
+            <small>1986 – 2000</small>
+          </div>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-green-600 text-xl">✔</span>
+          <div>
+            <p class="font-semibold">Ketut Lanang Murti</p>
+            <small>2000 – 2002</small>
+          </div>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-green-600 text-xl">✔</span>
+          <div>
+            <p class="font-semibold">I Nyoman Lipsuim</p>
+            <small>2002 – 2010</small>
+          </div>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-green-600 text-xl">✔</span>
+          <div>
+            <p class="font-semibold">Ketut Bruno F</p>
+            <small>2007 – 2013</small>
+          </div>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-green-600 text-xl">✔</span>
+          <div>
+            <p class="font-semibold">I Made Budi Utama</p>
+            <small>2010 – Sekarang</small>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+  </div>
+
   
 </section>
