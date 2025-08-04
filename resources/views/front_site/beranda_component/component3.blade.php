@@ -50,7 +50,7 @@
             <p class="text-sm text-gray-600 mt-1 line-clamp-2 leading-relaxed text-justify">
                 Your H2 headline curabitur sodales ligula in libero Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            </div>
+        </div>
         </div>
         <div class="flex gap-4">
             <img src="/img/berita1.jpg" alt="Berita" class="w-32 h-24 rounded-md object-cover">
@@ -96,19 +96,19 @@
     <div class="space-y-6">
 
       <!-- Card Kepala Desa -->
-      <div class="bg-gray-100 rounded-xl p-5 shadow-sm">
+      <div class="group p-4 border rounded-xl hover:border-green-500 duration-300">
         <h3 class="text-lg font-semibold text-gray-800 mb-3">Kepala Desa</h3>
         <div class="flex items-center gap-4">
           <img src="/img/kepala-desa.jpg" class="w-16 h-16 rounded-full object-cover">
           <div>
-            <p class="font-bold text-gray-800">Apud Adriansyah</p>
+            <p class="font-bold text-gray-800">Apud Adriansyah S.E</p>
             <p class="text-sm text-green-600">Kepala Desa Tajur Halanng</p>
           </div>
         </div>
         <p class="text-sm text-gray-600 mt-3 leading-relaxed text-justify">
           Selamat datang di Desa Tajur Halang, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere mattis dolor.
         </p>
-        <img src="/img/ttd.png" alt="Tanda Tangan" class="mt-4 w-16">
+        <img src="{{ asset('img/tanda.png')}}" alt="Tanda Tangan" class="mt-4 w-16">
       </div>
 
       <!-- Card Potensi Desa -->
