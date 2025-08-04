@@ -25,6 +25,7 @@
             Proin facilisis elementum libero, non aliquet sem semper id.
           </p>
           <div class="mt-auto pt-6">
+            <h1 class="font-bold text-green-500">Berita</h1>
             <div class="h-1.5 w-24 bg-green-600 rounded-full transition-all duration-300 group-hover:w-32"></div>
           </div>
         </div>
@@ -42,6 +43,7 @@
             Proin facilisis elementum libero, non aliquet sem semper id.
           </p>
           <div class="mt-auto pt-6">
+            <h1 class="font-bold text-green-500">Berita</h1>
             <div class="h-1.5 w-24 bg-green-600 rounded-full transition-all duration-300 group-hover:w-32"></div>
           </div>
         </div>
@@ -59,6 +61,7 @@
             Proin facilisis elementum libero, non aliquet sem semper id.
           </p>
           <div class="mt-auto pt-6">
+            <h1 class="font-bold text-green-500">Berita</h1>
             <div class="h-1.5 w-24 bg-green-600 rounded-full transition-all duration-300 group-hover:w-32"></div>
           </div>
         </div>
@@ -76,6 +79,7 @@
             Proin facilisis elementum libero, non aliquet sem semper id.
           </p>
           <div class="mt-auto pt-6">
+            <h1 class="font-bold text-green-500">Berita</h1>
             <div class="h-1.5 w-24 bg-green-600 rounded-full transition-all duration-300 group-hover:w-32"></div>
           </div>
         </div>
@@ -93,6 +97,7 @@
             Proin facilisis elementum libero, non aliquet sem semper id.
           </p>
           <div class="mt-auto pt-6">
+            <h1 class="font-bold text-green-500">Berita</h1>
             <div class="h-1.5 w-24 bg-green-600 rounded-full transition-all duration-300 group-hover:w-32"></div>
           </div>
         </div>
@@ -110,6 +115,7 @@
             Proin facilisis elementum libero, non aliquet sem semper id.
           </p>
           <div class="mt-auto pt-6">
+            <h1 class="font-bold text-green-500">Berita</h1>
             <div class="h-1.5 w-24 bg-green-600 rounded-full transition-all duration-300 group-hover:w-32"></div>
           </div>
         </div>
