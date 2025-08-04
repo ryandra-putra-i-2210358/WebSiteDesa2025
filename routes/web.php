@@ -40,7 +40,7 @@ Route::prefix('/')->controller(HomeController::class)->group(function () {
 
 
 Route::get('/logintjh', [AuthController::class, 'showLoginForm'])->name('logintjh');
-Route::post('/login', [AuthController::class, 'login']);
+Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 

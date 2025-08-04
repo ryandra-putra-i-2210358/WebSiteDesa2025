@@ -32,10 +32,10 @@
         <div
           class="absolute right-0 mt-2 w-48 z-50 bg-white rounded-lg shadow-lg ring-1 ring-black/5
                  opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 origin-top-right">
-          <a href="{{ route('home.profiledesa')}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Profile Desa</a>
-          <a href="{{ route('home.infografis')}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Info Grafis</a>
-          <a href="{{ route('home.bumdes')}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Bumdes</a>
-          <a href="{{ route('home.gallery')}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Gallery</a>
+          <a href="{{ route('home.profiledesa')}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Profile Desa</a>
+          <a href="{{ route('home.infografis')}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Info Grafis</a>
+          <a href="{{ route('home.bumdes')}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg">Bumdes</a>
+          <a href="{{ route('home.gallery')}}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 rounded-lg ">Gallery</a>
         </div>
       </div>
 

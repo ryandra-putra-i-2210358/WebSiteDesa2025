@@ -10,7 +10,7 @@
           </div>
           
       <!-- Satu item berita -->
-        <div class="flex gap-4">
+        <a href="#" class="flex gap-4">
             <img src="/img/berita1.jpg" alt="Berita" class="w-32 h-24 rounded-md object-cover">
             <div class="flex-1">
             <h3 class="font-semibold text-gray-800">
@@ -23,7 +23,7 @@
                 Your H2 headline curabitur sodales ligula in libero Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
             </div>
-        </div>
+        </a>
         <div class="flex gap-4">
             <img src="/img/berita1.jpg" alt="Berita" class="w-32 h-24 rounded-md object-cover">
             <div class="flex-1">
@@ -101,12 +101,12 @@
         <div class="flex items-center gap-4">
           <img src="/img/kepala-desa.jpg" class="w-16 h-16 rounded-full object-cover">
           <div>
-            <p class="font-bold text-gray-800">I Wayan Deka</p>
-            <p class="text-sm text-green-600">Kepala Desa Tukadaya</p>
+            <p class="font-bold text-gray-800">Apud Adriansyah</p>
+            <p class="text-sm text-green-600">Kepala Desa Tajur Halanng</p>
           </div>
         </div>
         <p class="text-sm text-gray-600 mt-3 leading-relaxed text-justify">
-          Selamat datang di Desa Tukadaya, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere mattis dolor.
+          Selamat datang di Desa Tajur Halang, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere mattis dolor.
         </p>
         <img src="/img/ttd.png" alt="Tanda Tangan" class="mt-4 w-16">
       </div>
@@ -119,23 +119,28 @@
         <ul class="divide-y divide-gray-200">
           <li class="flex items-center gap-3 px-5 py-3 hover:bg-gray-50">
             <img src="/img/seni.jpg" class="w-8 h-8 rounded-full object-cover" alt="">
-            <span class="text-gray-800 text-sm flex-1">Kelompok Seni Tradisional Manik Galih</span>
-            <span class="text-gray-400">›</span>
+            <span class="text-gray-800 text-sm flex-1">Perternakan Desa Tajur Halang</span>
+            <span class="text-gray-400"></span>
           </li>
           <li class="flex items-center gap-3 px-5 py-3 hover:bg-gray-50">
             <img src="/img/pantai.jpg" class="w-8 h-8 rounded-full object-cover" alt="">
-            <span class="text-gray-800 text-sm flex-1">Tujuan Wisata Pantai Wisata Medewi</span>
-            <span class="text-gray-400">›</span>
+            <span class="text-gray-800 text-sm flex-1">Pertanian Desa Tajur Halang</span>
+            <span class="text-gray-400"></span>
           </li>
           <li class="flex items-center gap-3 px-5 py-3 hover:bg-gray-50">
             <img src="/img/pantai.jpg" class="w-8 h-8 rounded-full object-cover" alt="">
-            <span class="text-gray-800 text-sm flex-1">Tujuan Wisata Pantai Wisata Medewi</span>
-            <span class="text-gray-400">›</span>
+            <span class="text-gray-800 text-sm flex-1">UMKM Desa Tajur Halang</span>
+            <span class="text-gray-400"></span>
           </li>
           <li class="flex items-center gap-3 px-5 py-3 hover:bg-gray-50">
             <img src="/img/pantai.jpg" class="w-8 h-8 rounded-full object-cover" alt="">
-            <span class="text-gray-800 text-sm flex-1">Tujuan Wisata Pantai Wisata Medewi</span>
-            <span class="text-gray-400">›</span>
+            <span class="text-gray-800 text-sm flex-1">Wisata Desa Tajur Halang</span>
+            <span class="text-gray-400"></span>
+          </li>
+          <li class="flex items-center gap-3 px-5 py-3 hover:bg-gray-50">
+            <img src="/img/pantai.jpg" class="w-8 h-8 rounded-full object-cover" alt="">
+            <span class="text-gray-800 text-sm flex-1">Potensi Lainya</span>
+            <span class="text-gray-400"></span>
           </li>
           <!-- Tambah item lainnya sesuai kebutuhan -->
         </ul>
