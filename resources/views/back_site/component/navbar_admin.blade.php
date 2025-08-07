@@ -66,9 +66,10 @@
             <span>Pengumuman</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ route('admin.news.index') }}">
             <i class="fas fa-newspaper"></i>
-            <span>Berita</span></a>
+            <span>Berita</span>
+        </a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="#">
@@ -77,7 +78,7 @@
     </li>
     
     <li class="nav-item">
-        <a class="nav-link" href="/">
+        <a class="nav-link" href="/" target="_blank">
             <i class="fas fa-home"></i>
             <span>Beranda</span></a>
     </li>

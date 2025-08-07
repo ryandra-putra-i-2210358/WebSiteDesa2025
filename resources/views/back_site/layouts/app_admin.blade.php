@@ -275,7 +275,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; E-Commerce Euy Store</span>
+                        <span>Copyright &copy;2025 Web Site Tajur Halang</span>
                     </div>
                 </div>
             </footer>

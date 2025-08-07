@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\News;
 
 use Illuminate\Http\Request;
 
@@ -15,8 +16,15 @@ class HomeController extends Controller
     public function pengumuman(){
         return view('front_site.home.pengumuman');
     }
-    public function berita(){
-        return view('front_site.home.berita');
+    public function berita()
+    {
+        $news = News::all(); // tidak perlu with('image') jika image berupa string
+        return view('front_site.home.berita', compact('news'));
+    }
+
+    public function showBerita($slug){
+        $new = News::where('slug', $slug)->firstOrFail();
+        return view('front_site.home.beritas.detail', compact('new'));
     }
     public function layanan(){
         return view('front_site.home.layanan');
@@ -49,4 +57,6 @@ class HomeController extends Controller
     public function potensilainya(){
         return view('front_site.home.potensilainya');
     }
+
+    
 }

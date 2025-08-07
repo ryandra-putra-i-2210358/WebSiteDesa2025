@@ -10,8 +10,8 @@
         </div>
       </div>
       <p class="text-white mb-4 leading-relaxed text-justify">
-        LHPD Desa Tukadaya, Kecamatan Melaya,<br>
-        Kabupates Jembrana, Bali.
+        Desa Tajur Halang, Kecamatan CiJeruk,<br>
+        Kabupaten Bogor, Jawa Barat.
       </p>
       <div class="flex space-x-4">
         <a href="#" class="hover:text-green-500"><i class="fab fa-x-twitter"></i></a>

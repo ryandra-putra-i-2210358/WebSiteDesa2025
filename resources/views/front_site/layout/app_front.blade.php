@@ -5,7 +5,14 @@
   <title>@yield('title')</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ asset('css_nav/style.css')}}">
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
   @vite('resources/tailwind/app.css') <!-- Sesuaikan jika pakai Laravel Vite -->
+
   <link rel="icon" href="{{ asset('img/logosvg.png') }}" sizes="32x32" type="image/png">
 
   
@@ -32,6 +39,8 @@
 
 
   <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
   
