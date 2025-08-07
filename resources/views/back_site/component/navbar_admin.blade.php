@@ -61,7 +61,7 @@
 
     
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ route('admin.pengumumans.index')}}">
            	<i class="fas fa-bullhorn"></i>
             <span>Pengumuman</span></a>
     </li>

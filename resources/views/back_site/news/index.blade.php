@@ -18,7 +18,7 @@
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Berita Desa</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Data Berita</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -44,7 +44,7 @@
                             <td>
                                 <a href="{{ route('admin.news.show', $item->id) }}" class="btn btn-primary btn-sm">Detail</a>
                                 <a href="{{ route('admin.news.edit', $item->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                                <form action="{{ route('admin.news.destroy', $item->id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Yakin hapus data?')">
+                                <form action="{{ route('admin.news.destroy', $item->id) }}" method="POST" style="display:inline;" onsubmit="return confirmHapus(event)";>
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-danger btn-sm">Hapus</button>
@@ -61,3 +61,27 @@
     </div>
 </div>
 @endsection
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script>
+    function confirmHapus(event) {
+        event.preventDefault();
+
+        Swal.fire({
+            title: 'Yakin Hapus Data?',
+            text: "Data yang dihapus tidak dapat dikembalikan!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Hapus',
+            cancelButtonText: 'Batal'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                event.target.submit();
+            }
+        });
+    }
+</script>

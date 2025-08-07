@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index(){
-        return view('front_site.home.index');
+        $news = News::latest()->paginate(5);
+        return view('front_site.home.index', compact('news'));
     }
     public function potensi(){
         return view('front_site.home.potensi');
@@ -21,12 +22,21 @@ class HomeController extends Controller
         $news = News::all(); // tidak perlu with('image') jika image berupa string
         return view('front_site.home.berita', compact('news'));
     }
-
-    public function showBerita($slug){
+    public function showBerita($slug)
+    {
+        // Ambil berita utama berdasarkan slug
         $new = News::where('slug', $slug)->firstOrFail();
-        return view('front_site.home.beritas.detail', compact('new'));
+
+        // Ambil berita lain sebagai "Latest Posts", kecuali yang sedang dibuka
+        $latestPosts = News::where('id', '!=', $new->id)
+                            ->latest()
+                            ->take(5)
+                            ->get(); // <- Wajib get() agar hasilnya Collection, bukan boolean
+
+        // Kirim ke view
+        return view('front_site.home.beritas.detail', compact('new', 'latestPosts'));
     }
-    public function layanan(){
+        public function layanan(){
         return view('front_site.home.layanan');
     }
     public function profiledesa(){

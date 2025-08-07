@@ -106,9 +106,9 @@ class NewsController extends Controller
     }
 
     // Halaman publik (slug)
-    public function showDetail($slug)
-    {
-        $news = News::where('slug', $slug)->firstOrFail();
-        return view('front_site.news.detail', compact('news'));
-    }
+    // public function showDetail($slug)
+    // {
+    //     $news = News::where('slug', $slug)->firstOrFail();
+    //     return view('front_site.news.detail', compact('news'));
+    // }
 }

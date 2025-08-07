@@ -4,92 +4,47 @@
       
       <!-- Kolom Kiri: Berita Desa -->
       <div class="md:col-span-2 space-y-6">
-          <h2 class="text-xl font-semibold text-gray-800">Berita Desa</h2>
+          <h2 id="berita" class="text-xl font-semibold text-gray-800">Berita Desa</h2>
           <div class="px-5 py-3 text-green-600 text-sm font-semibold border-t border-gray-200 text-right hover:underline">
                 <a href="{{ route('home.berita')}}">Lihat Semua →</a>
           </div>
           
       <!-- Satu item berita -->
-        <a href="#" class="flex gap-4">
-            <img src="/img/berita1.jpg" alt="Berita" class="w-32 h-24 rounded-md object-cover">
+      @foreach($news as $item)
+        <a href="{{ route('home.berita.show', $item->slug) }}" class="flex gap-4">
+            <img src="{{ asset($item->image) }}" alt="Berita" class="w-32 h-24 rounded-md object-cover">
             <div class="flex-1">
             <h3 class="font-semibold text-gray-800">
-                Pemerintah Desa Tukadaya Gelar Pelatihan untuk Anggota Linmas
+                  {{ $item->title}}
             </h3>
             <p class="text-sm text-gray-500 flex items-center gap-2 mt-1">
-                <span class="text-green-600">🟢 webdesa</span> · <span>June 7, 2023</span>
+                <span class="text-green-600">🟢 {{ $item->penulis }}</span> · <span>{{ \Carbon\Carbon::parse($item->tanggal)->format('d M Y') }}</span>
+
             </p>
             <p class="text-sm text-gray-600 mt-1 line-clamp-2 leading-relaxed text-justify">
-                Your H2 headline curabitur sodales ligula in libero Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                {{ $item->content}}
             </p>
             </div>
         </a>
-        <div class="flex gap-4">
-            <img src="/img/berita1.jpg" alt="Berita" class="w-32 h-24 rounded-md object-cover">
-            <div class="flex-1">
-            <h3 class="font-semibold text-gray-800">
-                Pemerintah Desa Tukadaya Gelar Pelatihan untuk Anggota Linmas
-            </h3>
-            <p class="text-sm text-gray-500 flex items-center gap-2 mt-1">
-                <span class="text-green-600">🟢 webdesa</span> · <span>June 7, 2023</span>
-            </p>
-            <p class="text-sm text-gray-600 mt-1 line-clamp-2 leading-relaxed text-justify">
-                Your H2 headline curabitur sodales ligula in libero Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            </div>
-        </div>
-        <div class="flex gap-4">
-            <img src="/img/berita1.jpg" alt="Berita" class="w-32 h-24 rounded-md object-cover">
-            <div class="flex-1">
-            <h3 class="font-semibold text-gray-800">
-                Pemerintah Desa Tukadaya Gelar Pelatihan untuk Anggota Linmas
-            </h3>
-            <p class="text-sm text-gray-500 flex items-center gap-2 mt-1">
-                <span class="text-green-600">🟢 webdesa</span> · <span>June 7, 2023</span>
-            </p>
-            <p class="text-sm text-gray-600 mt-1 line-clamp-2 leading-relaxed text-justify">
-                Your H2 headline curabitur sodales ligula in libero Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-        </div>
-        </div>
-        <div class="flex gap-4">
-            <img src="/img/berita1.jpg" alt="Berita" class="w-32 h-24 rounded-md object-cover">
-            <div class="flex-1">
-            <h3 class="font-semibold text-gray-800">
-                Pemerintah Desa Tukadaya Gelar Pelatihan untuk Anggota Linmas
-            </h3>
-            <p class="text-sm text-gray-500 flex items-center gap-2 mt-1">
-                <span class="text-green-600">🟢 webdesa</span> · <span>June 7, 2023</span>
-            </p>
-            <p class="text-sm text-gray-600 mt-1 line-clamp-2 leading-relaxed text-justify">
-                Your H2 headline curabitur sodales ligula in libero Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            </div>
-        </div>
-        <div class="flex gap-4">
-            <img src="/img/berita1.jpg" alt="Berita" class="w-32 h-24 rounded-md object-cover">
-            <div class="flex-1">
-            <h3 class="font-semibold text-gray-800">
-                Pemerintah Desa Tukadaya Gelar Pelatihan untuk Anggota Linmas
-            </h3>
-            <p class="text-sm text-gray-500 flex items-center gap-2 mt-1">
-                <span class="text-green-600">🟢 webdesa</span> · <span>June 7, 2023</span>
-            </p>
-            <p class="text-sm text-gray-600 mt-1 line-clamp-2 leading-relaxed text-justify">
-                Your H2 headline curabitur sodales ligula in libero Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            </div>
-        </div>
+      @endforeach
         
 
       <!-- Tambahkan berita berikutnya dengan blok <div class="flex gap-4">...</div> -->
 
       <!-- Pagination -->
+      
+
+<!-- Pagination -->
       <div class="flex items-center justify-center gap-2 pt-4">
-        <button class="w-8 h-8 rounded-full border border-green-500 text-green-600 font-semibold">1</button>
-        <button class="w-8 h-8 rounded-full text-gray-600 hover:text-green-600">2</button>
-        <button class="w-8 h-8 rounded-full text-gray-600 hover:text-green-600">3</button>
+        @for ($i = 1; $i <= $news->lastPage(); $i++)
+            <a href="?page={{ $i }}#berita"
+              class="w-8 h-8 rounded-full flex items-center justify-center
+                      {{ $news->currentPage() == $i ? 'border border-green-500 text-green-600 font-semibold' : 'text-gray-600 hover:text-green-600' }}">
+                {{ $i }}
+            </a>
+        @endfor
       </div>
+
     </div>
 
     <!-- Kolom Kanan: Kepala Desa dan Potensi -->
@@ -117,35 +72,35 @@
           Potensi Desa
         </div>
         <ul class="divide-y divide-gray-200">
-          <li class="flex items-center gap-3 px-5 py-3 hover:bg-gray-50">
+          <a href="{{ route('home.perternakan')}}" class="flex items-center gap-3 px-5 py-3 hover:bg-gray-50">
             <img src="/img/seni.jpg" class="w-8 h-8 rounded-full object-cover" alt="">
             <span class="text-gray-800 text-sm flex-1">Perternakan Desa Tajur Halang</span>
             <span class="text-gray-400"></span>
-          </li>
-          <li class="flex items-center gap-3 px-5 py-3 hover:bg-gray-50">
+          </a>
+          <a href="{{ route('home.pertanian')}}" class="flex items-center gap-3 px-5 py-3 hover:bg-gray-50">
             <img src="/img/pantai.jpg" class="w-8 h-8 rounded-full object-cover" alt="">
             <span class="text-gray-800 text-sm flex-1">Pertanian Desa Tajur Halang</span>
             <span class="text-gray-400"></span>
-          </li>
-          <li class="flex items-center gap-3 px-5 py-3 hover:bg-gray-50">
+          </a>
+          <a href="{{ route('home.umkm')}}" class="flex items-center gap-3 px-5 py-3 hover:bg-gray-50">
             <img src="/img/pantai.jpg" class="w-8 h-8 rounded-full object-cover" alt="">
             <span class="text-gray-800 text-sm flex-1">UMKM Desa Tajur Halang</span>
             <span class="text-gray-400"></span>
-          </li>
-          <li class="flex items-center gap-3 px-5 py-3 hover:bg-gray-50">
+          </a>
+          <a href="{{ route('home.wisata')}}" class="flex items-center gap-3 px-5 py-3 hover:bg-gray-50">
             <img src="/img/pantai.jpg" class="w-8 h-8 rounded-full object-cover" alt="">
             <span class="text-gray-800 text-sm flex-1">Wisata Desa Tajur Halang</span>
             <span class="text-gray-400"></span>
-          </li>
-          <li class="flex items-center gap-3 px-5 py-3 hover:bg-gray-50">
+          </a>
+          <a href="{{ route('home.potensilainya')}}" class="flex items-center gap-3 px-5 py-3 hover:bg-gray-50">
             <img src="/img/pantai.jpg" class="w-8 h-8 rounded-full object-cover" alt="">
             <span class="text-gray-800 text-sm flex-1">Potensi Lainya</span>
             <span class="text-gray-400"></span>
-          </li>
+          </a>
           <!-- Tambah item lainnya sesuai kebutuhan -->
         </ul>
         <div class="px-5 py-3 text-green-600 text-sm font-semibold border-t border-gray-200 text-right hover:underline">
-          <a href="{{ route('home.potensi')}}">Lihat Semua →</a>
+          <a href="{{ route('home.potensi')}}">Lihat Semua Potensi Desa →</a>
         </div>
       </div>
 

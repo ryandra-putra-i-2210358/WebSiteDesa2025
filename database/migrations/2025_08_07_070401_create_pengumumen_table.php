@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('pengumumen', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('penulis');
+            $table->string('slug')->unique();
+            $table->date('tanggal');
+            $table->longText('content');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
