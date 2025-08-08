@@ -16,11 +16,8 @@
     <div class="sidebar-heading">
         Menu Navigasi
     </div>
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-user"></i>
-            <span>Kepala Desa</span></a>
-    </li>
+    
+    
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
             aria-expanded="true" aria-controls="collapseTwo">
@@ -37,26 +34,43 @@
             </div>
         </div>
     </li>
+
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-            aria-expanded="true" aria-controls="collapsePages">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePotensi"
+            aria-expanded="false" aria-controls="collapsePotensi">
             <i class="fas fa-cubes"></i>
             <span>Potensi Desa</span>
         </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div id="collapsePotensi" class="collapse" aria-labelledby="headingPotensi" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Potensi Desa</h6>
-                {{-- <a class="collapse-item" href="login.html">Data All User</a> --}}
                 <a class="collapse-item" href="#">Perternakan</a>
                 <a class="collapse-item" href="#">Pertanian</a>
                 <a class="collapse-item" href="#">UMKM</a>
-                <a class="collapse-item" href="register.html">Wisata</a>
-                <a class="collapse-item" href="forgot-password.html">Lainya</a>
+                <a class="collapse-item" href="#">Wisata</a>
+                <a class="collapse-item" href="#">Lainya</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePengaturan"
+            aria-expanded="false" aria-controls="collapsePengaturan">
+            <i class="fas fa-user"></i>
+            <span>Pengaturan Lainya</span>
+        </a>
+        <div id="collapsePengaturan" class="collapse" aria-labelledby="headingPengaturan" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Pengaturan Lainya</h6>
+                <a class="collapse-item" href="#">Bio Kepala Desa</a>
+                <a class="collapse-item" href="{{ route('admin.sliders.index')}}">Slider</a>
+              
                 
             </div>
         </div>
     </li>
 
+    
     <!-- Nav Item - Pages Collapse Menu -->
 
     

@@ -6,7 +6,27 @@
     </div>
   </div>
 
-  {{-- Konten --}}
+  <div class="mt-12">
+    <h1 class="text-[30px] font-bold mb-8 text-center">Lokasi Desa Tajur Halang</h1>
+
+    <!-- Tambahkan flex dan justify-center -->
+    <div class="flex justify-center">
+      <div class="w-[1200px] h-[500px] rounded-lg overflow-hidden shadow-lg">
+          <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31701.755183320067!2d106.7500423569172!3d-6.681641945869611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69cef7e1fa3ed9%3A0x45546b9d03841409!2sTajur%20Halang%2C%20Cijeruk%2C%20Bogor%20Regency%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1754645131888!5m2!1sen!2sid&zoom=16" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+      </div>
+  </div>
+
+</div>
+
+
   <div class="max-w-7xl mx-auto px-4 -mt-10 mt-20 pb-12 space-y-12">
     
     {{-- Jumlah Penduduk dan Kepala Keluarga --}}

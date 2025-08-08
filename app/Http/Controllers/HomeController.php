@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\Layanan;
 use App\Models\News;
 use App\Models\Pengumuman;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index(){
         $news = News::latest()->paginate(5);
-        return view('front_site.home.index', compact('news'));
+        $sliders = Slider::all();
+        return view('front_site.home.index', compact('news', 'sliders'));
     }
     public function potensi(){
         return view('front_site.home.potensi');
