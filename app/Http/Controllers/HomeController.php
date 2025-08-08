@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\News;
 
+use App\Models\Layanan;
+use App\Models\News;
+use App\Models\Pengumuman;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -15,7 +17,13 @@ class HomeController extends Controller
         return view('front_site.home.potensi');
     }
     public function pengumuman(){
-        return view('front_site.home.pengumuman');
+        $pengumumans = Pengumuman::all();
+        return view('front_site.home.pengumuman', compact('pengumumans'));
+    }
+    public function showPengumuman($slug){
+        $pengumuman = Pengumuman::where('slug', $slug)->firstOrFail();
+        $latestPosts = Pengumuman::where('id', '!=', $pengumuman->id)->latest()->take(5)->get(); 
+        return view('front_site.home.pengumumans.detail', compact('pengumuman', 'latestPosts'));
     }
     public function berita()
     {
@@ -24,20 +32,15 @@ class HomeController extends Controller
     }
     public function showBerita($slug)
     {
-        // Ambil berita utama berdasarkan slug
-        $new = News::where('slug', $slug)->firstOrFail();
-
-        // Ambil berita lain sebagai "Latest Posts", kecuali yang sedang dibuka
-        $latestPosts = News::where('id', '!=', $new->id)
-                            ->latest()
-                            ->take(5)
-                            ->get(); // <- Wajib get() agar hasilnya Collection, bukan boolean
-
-        // Kirim ke view
+        $new = News::where('slug', $slug)->firstOrFail(); 
+        $latestPosts = News::where('id', '!=', $new->id)->latest()->take(5)->get(); // <- Wajib get() agar hasilnya Collection, bukan boolean
         return view('front_site.home.beritas.detail', compact('new', 'latestPosts'));
     }
-        public function layanan(){
-        return view('front_site.home.layanan');
+    
+    public function layanan(){
+        $layanans = Layanan::all();
+        
+        return view('front_site.home.layanan',compact('layanans'));
     }
     public function profiledesa(){
         return view('front_site.home.profiledesa');

@@ -1,6 +1,6 @@
 @extends('front_site.layout.app_front')
 
-@section('title', 'Berita')
+@section('title', 'Pengumuman')
 
 @section('navbar')
     @include('front_site.component.navbar')
@@ -12,7 +12,7 @@
     <div class="bg-green-700 text-white py-16 md:py-20
                 bg-[radial-gradient(#25633d_1px,transparent_1px)] bg-[size:16px_16px]">
         <div class="max-w-6xl mx-auto px-4 text-center">
-            <h1 class="text-3xl md:text-5xl font-extrabold">{{ $new->title }}</h1>
+            <h1 class="text-3xl md:text-5xl font-extrabold">{{ $pengumuman->title }}</h1>
         </div>
     </div>
 
@@ -21,14 +21,14 @@
         {{-- Kolom Utama --}}
         <div class="lg:col-span-2">
             {{-- Gambar utama --}}
-            @if ($new->image)
-                <img src="{{ asset($new->image) }}" alt="{{ $new->title }}" class="w-full rounded-xl shadow mb-8 object-cover aspect-[16/9]">
+            @if ($pengumuman->image)
+                <img src="{{ asset($pengumuman->image) }}" alt="{{ $pengumuman->title }}" class="w-full rounded-xl shadow mb-8 object-cover aspect-[16/9]">
             @endif
 
             {{-- Isi berita --}}
             @php
              // Ambil semua baris dari konten
-                $lines = preg_split('/\r\n|\r|\n/', trim($new->content));
+                $lines = preg_split('/\r\n|\r|\n/', trim($pengumuman->content));
 
                 // Potong menjadi kelompok 5 baris per paragraf
                 $paragraphs = array_chunk($lines, 5);
@@ -43,9 +43,9 @@
             
             {{-- Tombol kembali --}}
             <div class="mt-12">
-                <a href="{{ route('home.berita') }}"
+                <a href="{{ route('home.pengumuman') }}"
                    class="inline-block bg-green-600 text-white px-6 py-3 rounded-lg shadow hover:bg-green-700 transition">
-                    ← Kembali ke daftar Berita
+                    ← Kembali ke daftar Pengumuman
                 </a>
             </div>
         </div>
@@ -62,7 +62,7 @@
                                 <p class="text-sm text-gray-500">
                                     {{ optional($post->published_at ?? $post->tanggal)->format('d M Y') }}
                                 </p>
-                                <a href="{{ route('home.berita.show', $post->slug) }}" class="text-sm font-medium text-gray-800 hover:text-green-600 line-clamp-2">
+                                <a href="{{ route('home.pengumuman.show', $post->slug) }}" class="text-sm font-medium text-gray-800 hover:text-green-600 line-clamp-2">
                                     {{ $post->title }}
                                 </a>
                             </div>
@@ -73,10 +73,9 @@
 
             {{-- Optional: Ads or Banner --}}
             <div class="mt-8 space-y-4">
-                <h1 class="text-lg font-semibold mb-4 text-gray-800">Di Tulis Oleh : {{$new->penulis}}</h1>
-                <p class="text-sm mt-5 text-gray-600">{{ optional($new->published_at ?? $new->tanggal)->format('d M Y') }}</p>
+                <h1 class="text-lg font-semibold mb-4 text-gray-800">Di Tulis Oleh : {{$pengumuman->penulis}}</h1>
+                <p class="text-sm mt-5 text-gray-600">{{ optional($pengumuman->published_at ?? $pengumuman->tanggal)->format('d M Y') }}</p>
             </div>
-           
         </aside>
     </div>
 </section>

@@ -10,75 +10,19 @@
   <!-- Grid Card -->
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
   <!-- Card 1 -->
-        <div class="bg-white rounded-xl shadow border border-green-200 p-5 hover:shadow-lg hover:scale-105 hover:border-green-400 hover:bg-green-50 transition duration-300 ease-in-out">
-            <h3 class="font-semibold text-gray-800 mb-3">Pelayanan Administratif</h3>
-            <ul class="list-disc pl-5 space-y-2 text-gray-600 leading-relaxed text-justify">
-                <li>Pendaftaran penduduk dan pencatatan sipil (kelahiran, kematian, perkawinan, dll.)</li>
-                <li>Penerbitan surat-surat administratif (kartu keluarga, KTP, surat keterangan, dll.)</li>
-                <li>Pengelolaan data dan informasi desa.</li>
-            </ul>
-        </div>
-        <div class="bg-white rounded-xl shadow border border-green-200 p-5 
-                    hover:shadow-lg hover:scale-105 hover:border-green-400 hover:bg-green-50 
-                    transition duration-300 ease-in-out">
-            <h3 class="font-semibold text-gray-800 mb-3">Pelayanan Administratif</h3>
-            <ul class="list-disc pl-5 space-y-2 text-gray-600 leading-relaxed text-justify">
-                <li>Pendaftaran penduduk dan pencatatan sipil (kelahiran, kematian, perkawinan, dll.)</li>
-                <li>Penerbitan surat-surat administratif (kartu keluarga, KTP, surat keterangan, dll.)</li>
-                <li>Pengelolaan data dan informasi desa.</li>
-            </ul>
-        </div>
-        <div class="bg-white rounded-xl shadow border border-green-200 p-5 
-                    hover:shadow-lg hover:scale-105 hover:border-green-400 hover:bg-green-50 
-                    transition duration-300 ease-in-out">
-            <h3 class="font-semibold text-gray-800 mb-3">Pelayanan Administratif</h3>
-            <ul class="list-disc pl-5 space-y-2 text-gray-600 leading-relaxed text-justify">
-                <li>Pendaftaran penduduk dan pencatatan sipil (kelahiran, kematian, perkawinan, dll.)</li>
-                <li>Penerbitan surat-surat administratif (kartu keluarga, KTP, surat keterangan, dll.)</li>
-                <li>Pengelolaan data dan informasi desa.</li>
-            </ul>
-        </div>
-        <div class="bg-white rounded-xl shadow border border-green-200 p-5 
-                    hover:shadow-lg hover:scale-105 hover:border-green-400 hover:bg-green-50 
-                    transition duration-300 ease-in-out">
-            <h3 class="font-semibold text-gray-800 mb-3">Pelayanan Administratif</h3>
-            <ul class="list-disc pl-5 space-y-2 text-gray-600 leading-relaxed text-justify">
-                <li>Pendaftaran penduduk dan pencatatan sipil (kelahiran, kematian, perkawinan, dll.)</li>
-                <li>Penerbitan surat-surat administratif (kartu keluarga, KTP, surat keterangan, dll.)</li>
-                <li>Pengelolaan data dan informasi desa.</li>
-            </ul>
-        </div>
-        <div class="bg-white rounded-xl shadow border border-green-200 p-5 
-                    hover:shadow-lg hover:scale-105 hover:border-green-400 hover:bg-green-50 
-                    transition duration-300 ease-in-out">
-            <h3 class="font-semibold text-gray-800 mb-3">Pelayanan Administratif</h3>
-            <ul class="list-disc pl-5 space-y-2 text-gray-600 leading-relaxed text-justify">
-                <li>Pendaftaran penduduk dan pencatatan sipil (kelahiran, kematian, perkawinan, dll.)</li>
-                <li>Penerbitan surat-surat administratif (kartu keluarga, KTP, surat keterangan, dll.)</li>
-                <li>Pengelolaan data dan informasi desa.</li>
-            </ul>
-        </div>
-        <div class="bg-white rounded-xl shadow border border-green-200 p-5 
-                    hover:shadow-lg hover:scale-105 hover:border-green-400 hover:bg-green-50 
-                    transition duration-300 ease-in-out">
-            <h3 class="font-semibold text-gray-800 mb-3">Pelayanan Administratif</h3>
-            <ul class="list-disc pl-5 space-y-2 text-gray-600 leading-relaxed text-justify">
-                <li>Pendaftaran penduduk dan pencatatan sipil (kelahiran, kematian, perkawinan, dll.)</li>
-                <li>Penerbitan surat-surat administratif (kartu keluarga, KTP, surat keterangan, dll.)</li>
-                <li>Pengelolaan data dan informasi desa.</li>
-            </ul>
-        </div>
-    </div>
 
-  
-
-    <!-- Card 2 -->
+    @foreach($layanans as $layanan)
     
-
-    <!-- Card 3 -->
-    
-
-    <!-- Card 4 -->
+      <div class="bg-white rounded-xl shadow border border-green-200 p-5 hover:shadow-lg hover:scale-105 hover:border-green-400 hover:bg-green-50 transition duration-300 ease-in-out">
+          <h3 class="font-semibold text-gray-800 mb-3">{{ $layanan->judul }}</h3>
+          <ul class="list-disc pl-5 space-y-2 text-gray-600 leading-relaxed text-justify">
+              @foreach($layanan->items as $item)
+                  <li>{{ $item }}</li>
+              @endforeach
+          </ul>
+      </div>
+          
+    @endforeach
     
   </div>
 </div>

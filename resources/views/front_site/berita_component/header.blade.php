@@ -28,7 +28,7 @@
               {{ $item->title }}
             </h3>
             <p class="mt-3 text-gray-600 leading-relaxed">
-              {{ \Illuminate\Support\Str::limit(strip_tags($item->content), 45) }}
+              {{ \Illuminate\Support\Str::limit(strip_tags($item->content), 120) }}
             </p>
             <div class="mt-auto pt-6">
               <h1 class="font-bold text-green-500">Berita</h1>
