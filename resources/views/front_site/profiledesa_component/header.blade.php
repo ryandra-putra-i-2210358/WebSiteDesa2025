@@ -31,17 +31,18 @@
         <!-- Card Kepala Desa -->
         <div class="bg-white text-gray-800 rounded-xl shadow-lg p-6 w-full max-w-md mt-10 md:mt-0 md:ml-10">
           <div class="flex items-center gap-4 mb-4">
-            <img src="{{ asset('img/tanah.jpg')}}" alt="Kepala Desa" class="w-16 h-16 rounded-full object-cover">
+            <img src="{{ $villageHead && $villageHead->image ? asset($villageHead->image) : asset('img/download.jpeg') }}" alt="Kepala Desa" class="w-16 h-16 rounded-full object-cover">
             <div>
-              <h3 class="text-xl font-bold">Apud Adriansyah</h3>
-              <p class="text-green-600 font-medium">Kepala Desa Tajur Halang</p>
+              <h3 class="text-xl font-bold">{{ $villageHead->name ?? '-' }}</h3>
+              <p class="text-green-600 font-medium">{{ $villageHead->position ?? '-' }}</p>
             </div>
           </div>
           <p class="text-gray-700 mb-4">
-            Selamat datang di Desa Tukadaya, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere
-            mattis dolor, ut porttitor nulla sollicitudin quis.
+            {{ $villageHead->welcome_text ?? 'Belum ada sambutan' }}
           </p>
-          <img src="{{ asset('img/tanda.png')}}" alt="Tanda Tangan" class="w-24">
+          @if($villageHead && $villageHead->image_signature)
+            <img src="{{ asset($villageHead->image_signature) }}" alt="Tanda Tangan" class="mt-4 w-16">
+          @endif
         </div>
       </div>
     </div>

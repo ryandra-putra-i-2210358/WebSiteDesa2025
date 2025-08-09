@@ -6,14 +6,16 @@ use App\Models\Layanan;
 use App\Models\News;
 use App\Models\Pengumuman;
 use App\Models\Slider;
+use App\Models\VillageHead;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index(){
         $news = News::latest()->paginate(5);
+        $villageHead = VillageHead::first();
         $sliders = Slider::all();
-        return view('front_site.home.index', compact('news', 'sliders'));
+        return view('front_site.home.index', compact('news', 'sliders', 'villageHead'));
     }
     public function potensi(){
         return view('front_site.home.potensi');
@@ -45,7 +47,10 @@ class HomeController extends Controller
         return view('front_site.home.layanan',compact('layanans'));
     }
     public function profiledesa(){
-        return view('front_site.home.profiledesa');
+        $villageHead = VillageHead::first();
+
+
+        return view('front_site.home.profiledesa', compact('villageHead'));
     }
     public function infografis(){
         return view('front_site.home.infografis');

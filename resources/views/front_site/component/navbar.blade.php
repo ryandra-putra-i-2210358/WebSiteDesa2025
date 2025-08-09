@@ -1,4 +1,4 @@
-<header class="bg-white shadow-md">
+<header class="bg-gradient-to-r from-blue-600 via-teal-500 to-emerald-500 shadow-md">
   <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
     <!-- Logo -->
     <a href="{{ route('home.index') }}" class="flex items-center space-x-2">
@@ -17,12 +17,12 @@
 
     <!-- Navigation (Desktop) -->
     <nav class="hidden md:flex items-center space-x-6">
-      <a href="{{ route('home.index') }}" class="text-gray-700 hover:text-green-600 font-semibold">Beranda</a>
+      <a href="{{ route('home.index') }}" class="text-gray-700 hover:text-white font-semibold">Beranda</a>
 
       <!-- Dropdown -->
       <div class="relative group">
         <button
-          class="inline-flex items-center text-gray-700 hover:text-green-600 font-semibold focus:outline-none"
+          class="inline-flex items-center text-gray-700 hover:text-white font-semibold focus:outline-none"
           aria-haspopup="true">
           Info Desa
           <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
@@ -39,9 +39,9 @@
         </div>
       </div>
 
-      <a href="{{ route('home.potensi') }}" class="text-gray-700 hover:text-green-600 font-semibold">Potensi Desa</a>
-      <a href="{{ route('home.pengumuman') }}" class="text-gray-700 hover:text-green-600 font-semibold">Pengumuman</a>
-      <a href="{{ route('home.berita') }}" class="text-gray-700 hover:text-green-600 font-semibold">Berita</a>
+      <a href="{{ route('home.potensi') }}" class="text-gray-700 hover:text-white font-semibold">Potensi Desa</a>
+      <a href="{{ route('home.pengumuman') }}" class="text-gray-700 hover:text-white font-semibold">Pengumuman</a>
+      <a href="{{ route('home.berita') }}" class="text-gray-700 hover:text-white font-semibold">Berita</a>
     </nav>
 
     <!-- CTA -->

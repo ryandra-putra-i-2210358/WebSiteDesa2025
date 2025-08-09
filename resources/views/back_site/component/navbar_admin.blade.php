@@ -62,7 +62,7 @@
         <div id="collapsePengaturan" class="collapse" aria-labelledby="headingPengaturan" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Pengaturan Lainya</h6>
-                <a class="collapse-item" href="#">Bio Kepala Desa</a>
+                <a class="collapse-item" href="{{ route('admin.village_heads.index')}}">Bio Kepala Desa</a>
                 <a class="collapse-item" href="{{ route('admin.sliders.index')}}">Slider</a>
               
                 

@@ -54,21 +54,25 @@
       <div class="group p-4 border rounded-xl hover:border-green-500 duration-300">
         <h3 class="text-lg font-semibold text-gray-800 mb-3">Kepala Desa</h3>
         <div class="flex items-center gap-4">
-          <img src="/img/kepala-desa.jpg" class="w-16 h-16 rounded-full object-cover">
-          <div>
-            <p class="font-bold text-gray-800">Apud Adriansyah S.E</p>
-            <p class="text-sm text-green-600">Kepala Desa Tajur Halanng</p>
-          </div>
+            <img src="{{ $villageHead && $villageHead->image ? asset($villageHead->image) : asset('img/default.jpg') }}" 
+                class="w-16 h-16 rounded-full object-cover">
+            <div>
+                <p class="font-bold text-gray-800">{{ $villageHead->name ?? '-' }}</p>
+                <p class="text-sm text-green-600">{{ $villageHead->position ?? '-' }}</p>
+            </div>
         </div>
         <p class="text-sm text-gray-600 mt-3 leading-relaxed text-justify">
-          Selamat datang di Desa Tajur Halang, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere mattis dolor.
+            {{ $villageHead->welcome_text ?? 'Belum ada sambutan' }}
         </p>
-        <img src="{{ asset('img/tanda.png')}}" alt="Tanda Tangan" class="mt-4 w-16">
-      </div>
+        @if($villageHead && $villageHead->image_signature)
+            <img src="{{ asset($villageHead->image_signature) }}" alt="Tanda Tangan" class="mt-4 w-16">
+        @endif
+    </div>
+
 
       <!-- Card Potensi Desa -->
       <div class="bg-white rounded-xl shadow-sm border border-gray-200">
-        <div class="bg-green-600 text-white font-semibold px-5 py-3 rounded-t-xl">
+        <div class="bg-gradient-to-r from-blue-600 via-teal-500 to-emerald-500 shadow-md text-white font-semibold px-5 py-3 rounded-t-xl">
           Potensi Desa
         </div>
         <ul class="divide-y divide-gray-200">

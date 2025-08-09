@@ -7,6 +7,7 @@ use App\Http\Controllers\LayananController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\VillageHeadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,6 +68,7 @@ Route::middleware(['auth', 'is_admin'])->prefix('admin')->name('admin.')->group(
     Route::resource('pengumumans', PengumumanController::class);
     Route::resource('layanans', LayananController::class);
     Route::resource('sliders', SliderController::class);
+    Route::resource('village_heads', VillageHeadController::class);
 
 
 

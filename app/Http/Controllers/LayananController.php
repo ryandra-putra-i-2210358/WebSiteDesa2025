@@ -75,7 +75,7 @@ class LayananController extends Controller
             'items' => $request->items,
         ]);
 
-        return redirect()->route('admin.layanans.show', $layanan->id)->with('success', 'Layanan berhasil diperbarui.');
+        return redirect()->route('admin.layanans.index', $layanan->id)->with('success', 'Layanan berhasil diperbarui.');
     }
 
     /**
