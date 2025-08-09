@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HistoryVillageHeadController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PengumumanController;
@@ -63,12 +64,12 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth', 'is_admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::view('/dashboard', 'back_site.dashboard')->name('dashboard');
-    
     Route::resource('news', NewsController::class);
     Route::resource('pengumumans', PengumumanController::class);
     Route::resource('layanans', LayananController::class);
     Route::resource('sliders', SliderController::class);
     Route::resource('village_heads', VillageHeadController::class);
+    Route::resource('history_heads', HistoryVillageHeadController::class);
 
 
 

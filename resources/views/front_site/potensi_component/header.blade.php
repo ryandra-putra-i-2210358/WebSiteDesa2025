@@ -2,11 +2,12 @@
 <section class="relative">
   {{-- Header hijau + judul --}}
   <div
-    class="bg-green-700 text-white py-16 md:py-20
-           bg-[radial-gradient(#25633d_1px,transparent_1px)] bg-[size:16px_16px]">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl md:text-5xl font-extrabold text-center">Potensi Desa</h2>
-    </div>
+      class="relative shadow-md text-white py-16 md:py-20
+            bg-gradient-to-r from-blue-600 via-teal-500 to-emerald-500">
+      <div class="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.15)_1px,transparent_1px)] bg-[size:16px_16px]"></div>
+      <div class="relative max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-center">Potensi Desa</h2>
+      </div>
   </div>
 
   {{-- Grid kartu, dibuat sedikit “mengambang” dari header --}}

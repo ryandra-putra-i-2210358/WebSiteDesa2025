@@ -5,7 +5,7 @@
 
 @section('main')
     <div class="container-fluid">
-        <h1 class="h3 mb-2 text-gray-800">Tambah Pengumuman Baru</h1>
+        <h1 class="h3 mb-2 text-gray-800">Tambah Berita Baru</h1>
 
         @if ($errors->any())
             <div class="alert alert-danger">

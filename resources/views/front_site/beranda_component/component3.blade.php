@@ -77,27 +77,27 @@
         </div>
         <ul class="divide-y divide-gray-200">
           <a href="{{ route('home.perternakan')}}" class="flex items-center gap-3 px-5 py-3 hover:bg-gray-50">
-            <img src="/img/seni.jpg" class="w-8 h-8 rounded-full object-cover" alt="">
+            <img src="{{ asset('img/1.jpeg')}}" class="w-8 h-8 rounded-full object-cover" alt="">
             <span class="text-gray-800 text-sm flex-1">Perternakan Desa Tajur Halang</span>
             <span class="text-gray-400"></span>
           </a>
           <a href="{{ route('home.pertanian')}}" class="flex items-center gap-3 px-5 py-3 hover:bg-gray-50">
-            <img src="/img/pantai.jpg" class="w-8 h-8 rounded-full object-cover" alt="">
+            <img src="{{ asset('img/2.jpeg')}}" class="w-8 h-8 rounded-full object-cover" alt="">
             <span class="text-gray-800 text-sm flex-1">Pertanian Desa Tajur Halang</span>
             <span class="text-gray-400"></span>
           </a>
           <a href="{{ route('home.umkm')}}" class="flex items-center gap-3 px-5 py-3 hover:bg-gray-50">
-            <img src="/img/pantai.jpg" class="w-8 h-8 rounded-full object-cover" alt="">
+            <img src="{{ asset('img/3.jpeg')}}" class="w-8 h-8 rounded-full object-cover" alt="">
             <span class="text-gray-800 text-sm flex-1">UMKM Desa Tajur Halang</span>
             <span class="text-gray-400"></span>
           </a>
           <a href="{{ route('home.wisata')}}" class="flex items-center gap-3 px-5 py-3 hover:bg-gray-50">
-            <img src="/img/pantai.jpg" class="w-8 h-8 rounded-full object-cover" alt="">
+            <img src="{{ asset('img/4.jpeg')}}" class="w-8 h-8 rounded-full object-cover" alt="">
             <span class="text-gray-800 text-sm flex-1">Wisata Desa Tajur Halang</span>
             <span class="text-gray-400"></span>
           </a>
           <a href="{{ route('home.potensilainya')}}" class="flex items-center gap-3 px-5 py-3 hover:bg-gray-50">
-            <img src="/img/pantai.jpg" class="w-8 h-8 rounded-full object-cover" alt="">
+            <img src="{{ asset('img/5.jpeg')}}" class="w-8 h-8 rounded-full object-cover" alt="">
             <span class="text-gray-800 text-sm flex-1">Potensi Lainya</span>
             <span class="text-gray-400"></span>
           </a>
