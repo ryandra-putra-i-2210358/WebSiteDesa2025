@@ -27,7 +27,7 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Info Desa</h6>
-                <a class="collapse-item" href="#">Profile Desa</a>
+                <a class="collapse-item" href="{{ route('admin.profiles.index')}}">Profile Desa</a>
                 <a class="collapse-item" href="#">Info Grafis</a>
                 <a class="collapse-item" href="#">Bumdes</a>
                 <a class="collapse-item" href="#">Gallery</a>

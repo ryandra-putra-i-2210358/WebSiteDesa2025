@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\HistoryVillageHead;
 use App\Models\Layanan;
 use App\Models\News;
 use App\Models\Pengumuman;
+use App\Models\Profile;
 use App\Models\Slider;
 use App\Models\VillageHead;
 use Illuminate\Http\Request;
@@ -47,10 +49,12 @@ class HomeController extends Controller
         return view('front_site.home.layanan',compact('layanans'));
     }
     public function profiledesa(){
+        
         $villageHead = VillageHead::first();
+        $profiles = Profile::first();
+        $historys = HistoryVillageHead::all();
 
-
-        return view('front_site.home.profiledesa', compact('villageHead'));
+        return view('front_site.home.profiledesa', compact('villageHead', 'historys', 'profiles'));
     }
     public function infografis(){
         return view('front_site.home.infografis');

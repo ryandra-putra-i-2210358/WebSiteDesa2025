@@ -16,7 +16,7 @@ class VillageHeadController extends Controller
     public function create()
     {
         if (VillageHead::count() > 0) {
-            return redirect()->route('village-head.index')
+            return redirect()->route('admin.village_heads.index')
                 ->with('error', 'Data Kepala Desa sudah ada.');
         }
         return view('back_site.village_heads.create');

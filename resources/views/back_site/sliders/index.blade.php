@@ -15,6 +15,7 @@
             <button type="button" class="close" data-dismiss="alert">&times;</button>
         </div>
     @endif
+    
     <a href="{{ route('admin.sliders.create') }}" class="btn btn-primary mb-3">+ Tambah Slider Desa</a>
     <div class="card shadow mb-4">
         <div class="card-header py-3">

@@ -9,6 +9,7 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\VillageHeadController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,12 +65,14 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth', 'is_admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::view('/dashboard', 'back_site.dashboard')->name('dashboard');
+
     Route::resource('news', NewsController::class);
     Route::resource('pengumumans', PengumumanController::class);
     Route::resource('layanans', LayananController::class);
     Route::resource('sliders', SliderController::class);
     Route::resource('village_heads', VillageHeadController::class);
     Route::resource('history_heads', HistoryVillageHeadController::class);
+    Route::resource('profiles', ProfileController::class);
 
 
 

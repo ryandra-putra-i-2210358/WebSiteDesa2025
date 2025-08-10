@@ -9,8 +9,7 @@
 @section('content')
 <section class="relative">
     {{-- Header judul --}}
-    <div class="bg-green-700 text-white py-16 md:py-20
-                bg-[radial-gradient(#25633d_1px,transparent_1px)] bg-[size:16px_16px]">
+    <div class="relative shadow-md text-white py-16 md:py-20 bg-gradient-to-r from-blue-600 via-teal-500 to-emerald-500">
         <div class="max-w-6xl mx-auto px-4 text-center">
             <h1 class="text-3xl md:text-5xl font-extrabold">{{ $pengumuman->title }}</h1>
         </div>

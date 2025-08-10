@@ -5,7 +5,7 @@
             bg-gradient-to-r from-blue-600 via-teal-500 to-emerald-500">
       <div class="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.15)_1px,transparent_1px)] bg-[size:16px_16px]"></div>
       <div class="relative max-w-7xl mx-auto px-4">
-        <h2 class="text-3xl md:text-5xl font-extrabold text-center">Pengumuman</h2>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-center">Info Grafis</h2>
       </div>
   </div>
 
