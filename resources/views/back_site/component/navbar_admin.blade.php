@@ -30,7 +30,7 @@
                 <a class="collapse-item" href="{{ route('admin.profiles.index')}}">Profile Desa</a>
                 <a class="collapse-item" href="#">Info Grafis</a>
                 <a class="collapse-item" href="#">Bumdes</a>
-                <a class="collapse-item" href="#">Gallery</a>
+                <a class="collapse-item" href="{{ route('admin.gallerys.index')}}">Gallery</a>
             </div>
         </div>
     </li>
@@ -44,7 +44,7 @@
         <div id="collapsePotensi" class="collapse" aria-labelledby="headingPotensi" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Potensi Desa</h6>
-                <a class="collapse-item" href="#">Perternakan</a>
+                <a class="collapse-item" href="{{ route('admin.perternakans.index')}}">Perternakan</a>
                 <a class="collapse-item" href="#">Pertanian</a>
                 <a class="collapse-item" href="#">UMKM</a>
                 <a class="collapse-item" href="#">Wisata</a>

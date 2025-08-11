@@ -23,7 +23,7 @@ class SliderController extends Controller
         $request->validate([
             'judul' => 'required|string|max:255',
             'text' => 'nullable|string',
-            'gambar' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'gambar' => 'nullable',
         ]);
 
         $data = $request->only('judul', 'text');
@@ -55,7 +55,7 @@ class SliderController extends Controller
         $request->validate([
             'judul' => 'required|string|max:255',
             'text' => 'nullable|string',
-            'gambar' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'gambar' => 'nullable',
         ]);
 
         $data = $request->only('judul', 'text');

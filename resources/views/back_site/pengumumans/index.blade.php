@@ -38,7 +38,7 @@
                         <tr>
                             <td>{{ $item->title }}</td>
                             <td>{{ $item->penulis }}</td>
-                           <td>{{ \Carbon\Carbon::parse($item->tanggal)->format('d M Y') }}</td>
+                            <td>{{ \Carbon\Carbon::parse($item->tanggal)->format('d M Y') }}</td>
                             {{-- <td>{{ Str::limit($item->content, 50) }}</td> --}}
                             <td><img src="{{ asset($item->image) }}" width="100"></td>
                             <td>

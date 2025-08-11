@@ -3,13 +3,19 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HistoryVillageHeadController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\OtherController;
 use App\Http\Controllers\PengumumanController;
+use App\Http\Controllers\PertanianController;
+use App\Http\Controllers\PerternakanController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\VillageHeadController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UmkmController;
+use App\Http\Controllers\WisataController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,7 +50,10 @@ Route::prefix('/')->controller(HomeController::class)->group(function () {
     Route::get('/infografis', 'infografis')->name('home.infografis');
     Route::get('/bumdes', 'bumdes')->name('home.bumdes');
     Route::get('/gallery', 'gallery')->name('home.gallery');
+
     Route::get('/perternakan', 'perternakan')->name('home.perternakan');
+    Route::get('/perternakan/{slug}', 'showPerternakan')->name('home.perternakan.show');
+
     Route::get('/pertanian', 'pertanian')->name('home.pertanian');
     Route::get('/umkm', 'umkm')->name('home.umkm');
     Route::get('/wisata', 'wisata')->name('home.wisata');
@@ -52,9 +61,6 @@ Route::prefix('/')->controller(HomeController::class)->group(function () {
    
 
 });
-// Route::get('/berita/{slug}', [HomeController::class, 'showBerita'])->name('home.berita');
-
-
 
 Route::get('/logintjh', [AuthController::class, 'showLoginForm'])->name('logintjh');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
@@ -73,7 +79,13 @@ Route::middleware(['auth', 'is_admin'])->prefix('admin')->name('admin.')->group(
     Route::resource('village_heads', VillageHeadController::class);
     Route::resource('history_heads', HistoryVillageHeadController::class);
     Route::resource('profiles', ProfileController::class);
+    Route::resource('gallerys', GalleryController::class);
 
+    Route::resource('perternakans', PerternakanController::class);
+    Route::resource('pertanians', PertanianController::class);
+    Route::resource('umkms', UmkmController::class);
+    Route::resource('wisatas', WisataController::class);
+    Route::resource('others', OtherController::class);
 
 
 });

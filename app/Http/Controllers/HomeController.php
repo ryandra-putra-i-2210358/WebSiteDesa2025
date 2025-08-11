@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Gallery;
 use App\Models\HistoryVillageHead;
 use App\Models\Layanan;
 use App\Models\News;
 use App\Models\Pengumuman;
+use App\Models\Perternakan;
 use App\Models\Profile;
 use App\Models\Slider;
 use App\Models\VillageHead;
@@ -63,12 +65,21 @@ class HomeController extends Controller
         return view('front_site.home.bumdes');
     }
     public function gallery(){
-        return view('front_site.home.gallery');
+        $gallerys = Gallery::all();
+
+        return view('front_site.home.gallery', compact('gallerys'));
     }
     // POTENSI DESA
     public function perternakan(){
-        return view('front_site.home.perternakan');
+        $perternakans = Perternakan::all();
+        return view('front_site.home.perternakan', compact('perternakans'));
     }
+
+    public function showPerternakan($slug){
+        $perternakan = Perternakan::where('slug', $slug)->firstOrFail();
+        return view('front_site.home.perternakans.detail', compact('perternakan'));
+    }
+
     public function pertanian(){
         return view('front_site.home.pertanian');
     }
