@@ -68,6 +68,6 @@
   <!-- Bottom Bar -->
   <div class="mt-10 border-t border-gray-800 text-center py-4 text-gray-400 text-xs">
     Copyright © 2025 Desa Tajur Halang.
-    <span class="ml-1">Powered by <a href="#" class="text-green-500 hover:underline">Theme.co.id</a>.</span>
+   
   </div>
 </footer>

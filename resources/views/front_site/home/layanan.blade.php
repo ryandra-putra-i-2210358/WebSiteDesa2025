@@ -9,6 +9,8 @@
 @section('content')
     @include('front_site.layanan_component.header')
     @include('front_site.layanan_component.component1')
+    @include('front_site.layanan_component.component2')
+
 
 @endsection
 

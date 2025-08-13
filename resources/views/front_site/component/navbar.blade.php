@@ -42,6 +42,18 @@
       <a href="{{ route('home.potensi') }}" class="text-gray-700 hover:text-white font-semibold">Potensi Desa</a>
       <a href="{{ route('home.pengumuman') }}" class="text-gray-700 hover:text-white font-semibold">Pengumuman</a>
       <a href="{{ route('home.berita') }}" class="text-gray-700 hover:text-white font-semibold">Berita</a>
+      @auth
+        @if(Auth::user()->role === 'admin')
+            <a href="{{ route('admin.dashboard') }}" class="text-gray-700 hover:text-white font-semibold">Dashboard Admin</a>
+        @endif
+        <form action="{{ route('logout') }}" method="POST" class="inline">
+            @csrf
+            <button type="submit" class="text-red-600 hover:text-red-800 font-semibold">Logout</button>
+        </form>
+      @else
+          {{-- <a href="{{ route('login') }}" class="text-gray-700 hover:text-white font-semibold">Login</a> --}}
+      @endauth
+
     </nav>
 
     <!-- CTA -->
@@ -82,6 +94,19 @@
          class="block text-center bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 transition">
         Layanan Desa
       </a>
+
+      @auth
+        @if(Auth::user()->role === 'admin')
+            <a href="{{ route('admin.dashboard') }}" class="text-gray-700 hover:text-white font-semibold">Dashboard Admin</a>
+        @endif
+        <form action="{{ route('logout') }}" method="POST" class="inline">
+            @csrf
+            <button type="submit" class="text-red-600 hover:text-red-800 font-semibold">Logout</button>
+        </form>
+      @else
+          {{-- <a href="{{ route('login') }}" class="text-gray-700 hover:text-white font-semibold">Login</a> --}}
+      @endauth
+
     </div>
   </div>
 </header>

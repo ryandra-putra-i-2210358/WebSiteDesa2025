@@ -6,6 +6,7 @@ use App\Models\Gallery;
 use App\Models\HistoryVillageHead;
 use App\Models\Layanan;
 use App\Models\News;
+use App\Models\Other;
 use App\Models\Pengumuman;
 use App\Models\Pertanian;
 use App\Models\Perternakan;
@@ -13,6 +14,7 @@ use App\Models\Profile;
 use App\Models\Slider;
 use App\Models\Umkm;
 use App\Models\VillageHead;
+use App\Models\Wisata;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -102,11 +104,22 @@ class HomeController extends Controller
     }
 
     public function wisata(){
-        return view('front_site.home.wisata');
+        $wisatas = Wisata::all();
+        return view('front_site.home.wisata', compact('wisatas'));
     }
-    
+    public function showWisata($slug){
+        $wisata = Wisata::where('slug', $slug)->firstOrFail();
+        return view('front_site.home.wisatas.detail', compact('wisata'));
+    }
+
     public function potensilainya(){
-        return view('front_site.home.potensilainya');
+        $others = Other::all();
+        return view('front_site.home.potensilainya', compact('others'));
+    }
+
+    public function showOther($slug){
+        $other = Other::where('slug', $slug)->firstOrFail();
+        return view('front_site.home.potensilainyas.detail', compact('other'));
     }
 
     
