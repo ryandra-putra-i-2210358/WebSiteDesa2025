@@ -45,8 +45,8 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Potensi Desa</h6>
                 <a class="collapse-item" href="{{ route('admin.perternakans.index')}}">Perternakan</a>
-                <a class="collapse-item" href="#">Pertanian</a>
-                <a class="collapse-item" href="#">UMKM</a>
+                <a class="collapse-item" href="{{ route('admin.pertanians.index')}}">Pertanian</a>
+                <a class="collapse-item" href="{{ route('admin.umkms.index')}}">UMKM</a>
                 <a class="collapse-item" href="#">Wisata</a>
                 <a class="collapse-item" href="#">Lainya</a>
             </div>

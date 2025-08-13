@@ -16,9 +16,7 @@
                     
                     {{-- Gambar --}}
                     <div class="overflow-hidden">
-                        <img src="{{ asset('image_peternakan/' . $perternakan->image) }}"
-                             alt="{{ $perternakan->farm }}"
-                             class="aspect-[16/9] object-cover w-full transition-transform duration-500 group-hover:scale-110">
+                        <img src="{{ asset('image_perternakan/' . $perternakan->image) }}" alt="{{ $perternakan->farm }}" class="aspect-[16/9] object-cover w-full transition-transform duration-500 group-hover:scale-110">
                     </div>
                     
                     {{-- Konten --}}

@@ -12,7 +12,7 @@
             <!-- Gambar -->
             <div class="col-md-4">
                 @if($perternakan->image)
-                    <img src="{{ asset('image_peternakan/' . $perternakan->image) }}" alt="{{ $perternakan->farm }}" class="img-fluid rounded-start w-100 h-100 object-fit-cover">
+                    <img src="{{ asset('image_perternakan/' . $perternakan->image) }}" alt="{{ $perternakan->farm }}" class="img-fluid rounded-start w-100 h-100 object-fit-cover">
                 @else
                     <img src="{{ asset('no-image.png') }}" 
                          alt="Tidak ada gambar" 

@@ -7,62 +7,35 @@
   </div>
 
   {{-- Grid kartu, dibuat sedikit “mengambang” dari header --}}
-  <div class="max-w-7xl mx-auto px-4 -mt-10 mt-20 pb-12">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+  <div class="max-w-7xl mx-auto px-4 pt-12 pb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      {{-- CARD 1 --}}
-      <a href="#" class="bg-white rounded-xl shadow border hover:shadow-lg hover:scale-105 hover:border-green-400 hover:bg-green-50 transition duration-300 ease-in-out mt-8">
-        <img src="/img/potensi-1.jpg"
-            alt="Pertanian Desa Tajur Halang"
-            class="w-full aspect-[16/9] object-cover transition-transform duration-300 group-hover:scale-105">
-        <div class="p-6 flex-1 flex flex-col">
-          <h3 class="text-2xl font-extrabold text-gray-900">
-            Potensi Desa Lainya
-          </h3>
-          <p class="mt-3 text-gray-600 leading-relaxed">
-            Duis elementum volutpat justo at hendrerit. Duis ac leo et diam placerat tincidunt.
-            Proin facilisis elementum libero, non aliquet sem semper id.
-          </p>
-          <div class="mt-auto pt-6">
-            <div class="h-1.5 w-24 bg-green-600 rounded-full transition-all duration-300 group-hover:w-32"></div>
-          </div>
-        </div>
-      </a>
-      <a href="#" class="bg-white rounded-xl shadow border hover:shadow-lg hover:scale-105 hover:border-green-400 hover:bg-green-50 transition duration-300 ease-in-out mt-8">
-        <img src="/img/potensi-1.jpg"
-            alt="Pertanian Desa Tajur Halang"
-            class="w-full aspect-[16/9] object-cover transition-transform duration-300 group-hover:scale-105">
-        <div class="p-6 flex-1 flex flex-col">
-          <h3 class="text-2xl font-extrabold text-gray-900">
-            Potensi Desa Lainya
-          </h3>
-          <p class="mt-3 text-gray-600 leading-relaxed">
-            Duis elementum volutpat justo at hendrerit. Duis ac leo et diam placerat tincidunt.
-            Proin facilisis elementum libero, non aliquet sem semper id.
-          </p>
-          <div class="mt-auto pt-6">
-            <div class="h-1.5 w-24 bg-green-600 rounded-full transition-all duration-300 group-hover:w-32"></div>
-          </div>
-        </div>
-      </a>
-      <a href="#" class="bg-white rounded-xl shadow border hover:shadow-lg hover:scale-105 hover:border-green-400 hover:bg-green-50 transition duration-300 ease-in-out mt-8">
-        <img src="/img/potensi-1.jpg"
-            alt="Pertanian Desa Tajur Halang"
-            class="w-full aspect-[16/9] object-cover transition-transform duration-300 group-hover:scale-105">
-        <div class="p-6 flex-1 flex flex-col">
-          <h3 class="text-2xl font-extrabold text-gray-900">
-            Potensi Desa Lainya
-          </h3>
-          <p class="mt-3 text-gray-600 leading-relaxed">
-            Duis elementum volutpat justo at hendrerit. Duis ac leo et diam placerat tincidunt.
-            Proin facilisis elementum libero, non aliquet sem semper id.
-          </p>
-          <div class="mt-auto pt-6">
-            <div class="h-1.5 w-24 bg-green-600 rounded-full transition-all duration-300 group-hover:w-32"></div>
-          </div>
-        </div>
-      </a>
+            @foreach($pertanians as $pertanian)
+                <a href="{{ route('home.pertanian.show', $pertanian->slug) }}" 
+                   class="group bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
+                    
+                    {{-- Gambar --}}
+                    <div class="overflow-hidden">
+                        <img src="{{ asset('image_pertanian/' . $pertanian->image) }}" alt="{{ $pertanian->farm }}" class="aspect-[16/9] object-cover w-full transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    
+                    {{-- Konten --}}
+                    <div class="p-6 flex flex-col">
+                        <h3 class="text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">
+                            {{ $pertanian->farm }}
+                        </h3>
+                        <p class="mt-3 text-gray-600 leading-relaxed text-sm">
+                            {{ \Illuminate\Support\Str::limit(strip_tags($pertanian->content), 120) }}
+                        </p>
+                        <div class="mt-5">
+                            <span class="text-green-600 font-semibold text-sm inline-flex items-center group-hover:underline">
+                                Lihat Selengkapnya →
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            @endforeach
 
+        </div>
     </div>
-  </div>
 </section>

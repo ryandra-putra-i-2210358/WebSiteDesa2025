@@ -45,8 +45,9 @@ class PerternakanController extends Controller
         // Upload gambar
         $imageName = null;
         if ($request->hasFile('image')) {
-            $imageName = time() . '.' . $request->image->extension();
-            $request->image->move(public_path('image_peternakan'), $imageName);
+            $image = $request->file('image');
+            $imageName = time() . '_' . $image->getClientOriginalName();
+            $image->move(public_path('image_perternakan'), $imageName);
         }
 
         Perternakan::create([
@@ -104,8 +105,12 @@ class PerternakanController extends Controller
 
         // Upload gambar baru kalau ada
         if ($request->hasFile('image')) {
-            $imageName = time() . '.' . $request->image->extension();
-            $request->image->move(public_path('image_peternakan'), $imageName);
+            if ($perternakan->image && file_exists(public_path('image_perternakan/' . $perternakan->image))) {
+                unlink(public_path('image_perternakan/' . $perternakan->image));
+            }
+            $image = $request->file('image');
+            $imageName = time() . '_' . $image->getClientOriginalName();
+            $image->move(public_path('image_perternakan'), $imageName);
             $perternakan->image = $imageName;
         }
 
@@ -128,11 +133,11 @@ class PerternakanController extends Controller
     public function destroy($id)
     {
         $perternakan = Perternakan::findOrFail($id);
-        if ($perternakan->image && file_exists(public_path('image_peternakan/' . $perternakan->image))) {
-            unlink(public_path('image_peternakan/' . $perternakan->image));
+        if ($perternakan->image && file_exists(public_path('image_perternakan/' . $perternakan->image))) {
+            unlink(public_path('image_perternakan/' . $perternakan->image));
         }
-        $perternakan->delete();
 
+        $perternakan->delete();
         return redirect()->route('admin.perternakans.index')->with('success', 'Data berhasil dihapus');
     }
 }

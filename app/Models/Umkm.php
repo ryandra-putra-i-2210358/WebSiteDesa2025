@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Umkm extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'farm',
+        'pemilik',
+        'alamat',
+        'nohp',
+        'jenis_umkm',
+        'jumlah_umkm',
+        'slug',
+        'content',
+        'image',
+    ];
 }
+

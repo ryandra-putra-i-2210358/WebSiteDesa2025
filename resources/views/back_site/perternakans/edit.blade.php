@@ -54,7 +54,7 @@
         <div class="mb-3">
             <label for="image" class="form-label">Gambar (opsional)</label><br>
             @if ($perternakan->image)
-                <img src="{{ asset('image_peternakan/' . $perternakan->image) }}" alt="Gambar lama" width="200" class="mb-2 d-block rounded">
+                <img src="{{ asset('image_perternakan/' . $perternakan->image) }}" alt="Gambar lama" width="200" class="mb-2 d-block rounded">
             @endif
             <input type="file" name="image" class="form-control mt-2">
         </div>

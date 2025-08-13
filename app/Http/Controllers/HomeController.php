@@ -7,6 +7,7 @@ use App\Models\HistoryVillageHead;
 use App\Models\Layanan;
 use App\Models\News;
 use App\Models\Pengumuman;
+use App\Models\Pertanian;
 use App\Models\Perternakan;
 use App\Models\Profile;
 use App\Models\Slider;
@@ -81,14 +82,23 @@ class HomeController extends Controller
     }
 
     public function pertanian(){
-        return view('front_site.home.pertanian');
+        $pertanians = Pertanian::all();
+        return view('front_site.home.pertanian', compact('pertanians'));
     }
+
+    public function showPertanian($slug){
+        $pertanian = Pertanian::where('slug', $slug)->firstOrFail();
+        return view('front_site.home.pertanians.detail', compact('pertanian'));
+    }
+
     public function umkm(){
         return view('front_site.home.umkm');
     }
+
     public function wisata(){
         return view('front_site.home.wisata');
     }
+    
     public function potensilainya(){
         return view('front_site.home.potensilainya');
     }

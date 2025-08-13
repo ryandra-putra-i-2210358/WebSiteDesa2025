@@ -1,11 +1,11 @@
 @extends('back_site.layouts.app_admin')
 
-@section('tittle-admin', 'Pengisian Data Perternakan')
+@section('tittle-admin', 'Pengisian Data Pertanian')
 @include('back_site.component.navbar_admin')
 
 @section('main')
     <div class="container-fluid">
-        <h1 class="h3 mb-2 text-gray-800">Data Peternakan</h1>
+        <h1 class="h3 mb-2 text-gray-800">Data Pertanian</h1>
 
         @if(session('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -14,10 +14,10 @@
             </div>
         @endif
 
-        <a href="{{ route('admin.perternakans.create') }}" class="btn btn-primary mb-3">+ Tambah Data Perternakan</a>
+        <a href="{{ route('admin.pertanians.create') }}" class="btn btn-primary mb-3">+ Tambah Data Pertanian</a>
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Data Pertenakan</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Data Pertanian</h6>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -27,41 +27,46 @@
                                 <th>Nama</th>
                                 <th>Alamat</th>
                                 <th>No Hp</th>
-                                <th>Jenis Ternak</th>
-                                <th>Jumlah Ternak</th>
+                                <th>Jenis Pertanian</th>
+                                <th>Jumlah Pertanian</th>
                                 <th>Pemilik</th>
                                 <th>Image</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($perternakans as $perternakan)
+                            @foreach($pertanians as $pertanian)
                                 <tr>
-                                    <td>{{$perternakan->farm}}</td>
-                                    <td>{{$perternakan->alamat}}</td>
-                                    <td>{{$perternakan->nohp}}</td>
-                                    <td>{{$perternakan->jenis_ternak}}</td>
-                                    <td>{{$perternakan->jumlah_ternak}}</td>
-                                    <td>{{$perternakan->pemilik}}</td>
-                                    <td><img src="{{ asset('image_perternakan/' . $perternakan->image) }}" width="100"></td>
+                                    <td>{{$pertanian->farm}}</td>
+                                    <td>{{$pertanian->alamat}}</td>
+                                    <td>{{$pertanian->nohp}}</td>
+                                    <td>{{$pertanian->jenis_pertanian}}</td>
+                                    <td>{{$pertanian->jumlah_pertanian}}</td>
+                                    <td>{{$pertanian->pemilik}}</td>
+                                    <td><img src="{{ asset('image_pertanian/' . $pertanian->image) }}" width="100"></td>
                                     <td>
-                                        <a href="{{ route('admin.perternakans.show', $perternakan->id) }}" class="btn btn-primary btn-sm">Detail</a>
-                                        <a href="{{ route('admin.perternakans.edit', $perternakan->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                                        <form action="{{ route('admin.perternakans.destroy', $perternakan->id) }}" method="POST" style="display:inline;" onsubmit="return confirmHapus(event)">
+                                        <a href="{{ route('admin.pertanians.show', $pertanian->id) }}" class="btn btn-primary btn-sm">Detail</a>
+                                        <a href="{{ route('admin.pertanians.edit', $pertanian->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                                        <form action="{{ route('admin.pertanians.destroy', $pertanian->id) }}" method="POST" style="display:inline;" onsubmit="return confirmHapus(event)">
                                             @csrf
                                             @method('DELETE')
                                             <button class="btn btn-danger btn-sm">Hapus</button>
                                         </form>
+
                                     </td>
                                 </tr>
+
                             @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
+
     </div>
+
 @endsection
+
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script>
