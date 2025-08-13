@@ -1,6 +1,6 @@
 @extends('back_site.layouts.app_admin')
 
-@section('tittle-admin', 'Pengisian Berita')
+@section('tittle-admin', 'Pengisian Perternakan')
 @include('back_site.component.navbar_admin')
 
 @section('main')

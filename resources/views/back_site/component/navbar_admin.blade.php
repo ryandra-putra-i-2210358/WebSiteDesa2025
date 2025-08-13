@@ -47,8 +47,8 @@
                 <a class="collapse-item" href="{{ route('admin.perternakans.index')}}">Perternakan</a>
                 <a class="collapse-item" href="{{ route('admin.pertanians.index')}}">Pertanian</a>
                 <a class="collapse-item" href="{{ route('admin.umkms.index')}}">UMKM</a>
-                <a class="collapse-item" href="#">Wisata</a>
-                <a class="collapse-item" href="#">Lainya</a>
+                <a class="collapse-item" href="{{ route('admin.wisatas.index')}}">Wisata</a>
+                <a class="collapse-item" href="{{ route('admin.others.index')}}">Lainya</a>
             </div>
         </div>
     </li>

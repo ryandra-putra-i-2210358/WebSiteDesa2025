@@ -71,7 +71,7 @@
                     <!-- Topbar Logo -->
                     <!-- Topbar Logo + Nama Desa -->
                     <div class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0">
-                        <a href="{{ url('/') }}" class="d-flex align-items-center text-decoration-none">
+                        <a href="{{ route('admin.dashboard')}}" class="d-flex align-items-center text-decoration-none">
                             <img src="{{ asset('img/logosvg.png') }}" 
                                 alt="Logo Desa Tajur Halang" 
                                 style="height: 40px; object-fit: contain; margin-right: 10px; width:50px">

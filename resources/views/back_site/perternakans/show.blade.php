@@ -4,7 +4,7 @@
 @include('back_site.component.navbar_admin')
 
 @section('main')
-<div class="container mt-4">
+    <div class="container mt-4">
         <h1 class="mb-4">Detail Perternakan</h1>
 
         <div class="card shadow-sm border-0">

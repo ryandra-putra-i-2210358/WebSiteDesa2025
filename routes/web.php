@@ -70,10 +70,10 @@ Route::get('/logintjh', [AuthController::class, 'showLoginForm'])->name('logintj
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-
 //BACK SITE
 
 Route::middleware(['auth', 'is_admin'])->prefix('admin')->name('admin.')->group(function () {
+    
     Route::view('/dashboard', 'back_site.dashboard')->name('dashboard');
 
     Route::resource('news', NewsController::class);
@@ -88,6 +88,8 @@ Route::middleware(['auth', 'is_admin'])->prefix('admin')->name('admin.')->group(
     Route::resource('perternakans', PerternakanController::class);
     Route::resource('pertanians', PertanianController::class);
     Route::resource('umkms', UmkmController::class);
+    Route::resource('wisatas', WisataController::class);
+    Route::resource('others', OtherController::class);
     Route::resource('wisatas', WisataController::class);
     Route::resource('others', OtherController::class);
 

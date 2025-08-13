@@ -52,7 +52,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="image" class="form-label">Gambar (opsional)</label><br>
+            <label for="image" class="form-label">Gambar</label><br>
             @if ($perternakan->image)
                 <img src="{{ asset('image_perternakan/' . $perternakan->image) }}" alt="Gambar lama" width="200" class="mb-2 d-block rounded">
             @endif
