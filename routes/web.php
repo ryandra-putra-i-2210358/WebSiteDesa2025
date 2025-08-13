@@ -57,9 +57,9 @@ Route::prefix('/')->controller(HomeController::class)->group(function () {
     Route::get('/pertanian', 'pertanian')->name('home.pertanian');
     Route::get('/pertanian/{slug}', 'showPertanian')->name('home.pertanian.show');
 
-
-
     Route::get('/umkm', 'umkm')->name('home.umkm');
+    Route::get('/umkm/{slug}', 'showUmkm')->name('home.umkm.show');
+
     Route::get('/wisata', 'wisata')->name('home.wisata');
     Route::get('/potensilainya', 'potensilainya')->name('home.potensilainya');
    

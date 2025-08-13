@@ -11,6 +11,7 @@ use App\Models\Pertanian;
 use App\Models\Perternakan;
 use App\Models\Profile;
 use App\Models\Slider;
+use App\Models\Umkm;
 use App\Models\VillageHead;
 use Illuminate\Http\Request;
 
@@ -92,7 +93,12 @@ class HomeController extends Controller
     }
 
     public function umkm(){
-        return view('front_site.home.umkm');
+        $umkms = Umkm::all();
+        return view('front_site.home.umkm', compact('umkms'));
+    }
+    public function showUmkm($slug){
+        $umkm = Umkm::where('slug', $slug)->firstOrFail();
+        return view('front_site.home.umkms.detail', compact('umkm'));
     }
 
     public function wisata(){

@@ -1,6 +1,6 @@
 @extends('back_site.layouts.app_admin')
 
-@section('tittle-admin', 'Edit Peternakan')
+@section('tittle-admin', 'Edit Petanian')
 @include('back_site.component.navbar_admin')
 
 @section('main')

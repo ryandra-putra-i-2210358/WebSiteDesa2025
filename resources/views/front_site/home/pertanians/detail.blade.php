@@ -1,6 +1,6 @@
 @extends('front_site.layout.app_front')
 
-@section('title', 'Detail Peternakan')
+@section('title', 'Detail Pepertanianan')
 
 @section('navbar')
     @include('front_site.component.navbar')
@@ -31,13 +31,13 @@
             <div class="p-8 space-y-6">
                 <div>
                     <h1 class="text-3xl font-bold text-gray-800">{{ $pertanian->farm }}</h1>
-                    <p class="mt-2 text-gray-500">Informasi lengkap mengenai peternakan ini</p>
+                    <p class="mt-2 text-gray-500">Informasi lengkap mengenai pertanianan ini</p>
                 </div>
 
                 {{-- Info Peternakan --}}
                 <div class="grid md:grid-cols-2 gap-4 text-gray-700">
-                    <p><strong>Jenis Ternak:</strong> {{ $pertanian->jenis_ternak }}</p>
-                    <p><strong>Jumlah Ternak:</strong> {{ $pertanian->jumlah_ternak }}</p>
+                    <p><strong>Jenis Pertanian:</strong> {{ $pertanian->jenis_pertanian }}</p>
+                    <p><strong>Jumlah Pertanian:</strong> {{ $pertanian->jumlah_pertanian }}</p>
                     <p><strong>Pemilik:</strong> {{ $pertanian->pemilik }}</p>
                     <p><strong>Lokasi:</strong> {{ $pertanian->alamat }}</p>
                     <p><strong>No. HP:</strong> {{ $pertanian->nohp }}</p>
