@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BumdesController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HistoryVillageHeadController;
@@ -87,8 +88,7 @@ Route::middleware(['auth', 'is_admin'])->prefix('admin')->name('admin.')->group(
     Route::resource('wisatas', WisataController::class);
     Route::resource('others', OtherController::class);
     Route::resource('infografis', InfoGrafiController::class);
-
-
+    Route::resource('bumdess', BumdesController::class);
 });
 
 

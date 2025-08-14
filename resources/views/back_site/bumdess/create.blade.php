@@ -18,21 +18,25 @@
             </div>   
             
         @endif
-        
-        <form action="{{ route('admin.gallerys.store') }}" method="POST" enctype="multipart/form-data">
+
+        <form action="{{ route('admin.bumdess.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
-            <label for="judul">Judul</label>
-            <input type="text" name="judul" id="judul" class="form-control" required>
+            <label for="name">Nama</label>
+            <input type="text" name="name" id="name" class="form-control" required>
+
+            <label for="jabatan">Jabatan</label>
+            <input type="text" name="jabatan" id="jabatan" class="form-control" required>
 
             <label for="image">Gambar</label>
             <input type="file" name="image" id="image" class="form-control">
 
             <br>
             <button type="submit" class="btn btn-primary">Simpan</button>
-            <a href="{{ route('admin.gallerys.index') }}" class="btn btn-secondary">Kembali</a>
+            <a href="{{ route('admin.bumdess.index') }}" class="btn btn-secondary">Kembali</a>
         </form>
+
+
     </div>
 
 @endsection
-    

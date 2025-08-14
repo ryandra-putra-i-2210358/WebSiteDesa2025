@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bumdes;
 use App\Models\Gallery;
 use App\Models\HistoryVillageHead;
 use App\Models\InfoGrafi;
@@ -27,7 +28,8 @@ class HomeController extends Controller
         return view('front_site.home.index', compact('news', 'sliders', 'villageHead'));
     }
     public function potensi(){
-        return view('front_site.home.potensi');
+        $gallerys = Gallery::all();
+        return view('front_site.home.potensi', compact('gallerys'));
     }
     public function pengumuman(){
         $pengumumans = Pengumuman::all();
@@ -68,7 +70,9 @@ class HomeController extends Controller
         return view('front_site.home.infografis', compact('infografi'));
     }
     public function bumdes(){
-        return view('front_site.home.bumdes');
+        $bumdess = Bumdes::all();
+
+        return view('front_site.home.bumdes', compact('bumdess'));
     }
     public function gallery(){
         $gallerys = Gallery::all();

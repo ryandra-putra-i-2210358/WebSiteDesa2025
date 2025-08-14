@@ -14,33 +14,16 @@
         {{-- Judul --}}
         <div class="mb-3">
             <label for="judul" class="form-label">Judul</label>
-            <input 
-                type="text" 
-                id="judul" 
-                name="judul" 
-                class="form-control" 
-                value="{{ old('judul', $gallery->judul) }}" 
-                required
-            >
+            <input type="text" id="judul" name="judul" class="form-control" value="{{ old('judul', $gallery->judul) }}" required>
         </div>
 
         {{-- Gambar --}}
         <div class="mb-3">
-            <label for="image" class="form-label">Gambar (opsional)</label><br>
+            <label for="image" class="form-label">Gambar</label><br>
             @if ($gallery->image)
-                <img 
-                    src="{{ asset($gallery->image) }}" 
-                    alt="Gambar lama" 
-                    width="200" 
-                    class="mb-2 d-block rounded"
-                >
+                <img src="{{ asset($gallery->image) }}" alt="Gambar lama" width="200" class="mb-2 d-block rounded">
             @endif
-            <input 
-                type="file" 
-                id="image" 
-                name="image" 
-                class="form-control mt-2"
-            >
+            <input type="file" id="image" name="image" class="form-control mt-2">
         </div>
         
         {{-- Tombol Aksi --}}
