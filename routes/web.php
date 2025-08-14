@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HistoryVillageHeadController;
+use App\Http\Controllers\InfoGrafiController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\NewsController;
@@ -69,6 +70,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::middleware(['auth', 'is_admin'])->prefix('admin')->name('admin.')->group(function () {
     // Route::view('/dashboard', 'back_site.dashboard')->name('dashboard');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/messages', [MessageController::class, 'index'])->name('messages.index');
     Route::resource('news', NewsController::class);
     Route::resource('pengumumans', PengumumanController::class);
     Route::resource('layanans', LayananController::class);
@@ -84,7 +86,7 @@ Route::middleware(['auth', 'is_admin'])->prefix('admin')->name('admin.')->group(
     Route::resource('others', OtherController::class);
     Route::resource('wisatas', WisataController::class);
     Route::resource('others', OtherController::class);
-    Route::get('/messages', [MessageController::class, 'index'])->name('messages.index');
+    Route::resource('infografis', InfoGrafiController::class);
 
 
 });

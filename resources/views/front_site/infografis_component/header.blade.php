@@ -36,19 +36,19 @@
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
       <div class="border rounded-lg p-4 bg-green-50">
         <p class="text-sm">Total Penduduk</p>
-        <p class="text-2xl font-bold text-green-700">1.135 Jiwa</p>
+        <p class="text-2xl font-bold text-green-700">{{$infografi->total_penduduk}} Jiwa</p>
       </div>
       <div class="border rounded-lg p-4">
         <p class="text-sm">Kepala Keluarga</p>
-        <p class="text-2xl font-bold text-pink-700">135 Jiwa</p>
+        <p class="text-2xl font-bold text-pink-700">{{$infografi->kepala_keluarga}} Jiwa</p>
       </div>
       <div class="border rounded-lg p-4">
         <p class="text-sm">Perempuan</p>
-        <p class="text-2xl font-bold text-red-700">1035 Jiwa</p>
+        <p class="text-2xl font-bold text-red-700">{{$infografi->perempuan}} Jiwa</p>
       </div>
       <div class="border rounded-lg p-4">
         <p class="text-sm">Laki-laki</p>
-        <p class="text-2xl font-bold text-yellow-700">35 Jiwa</p>
+        <p class="text-2xl font-bold text-yellow-700">{{$infografi->laki_laki}} Jiwa</p>
       </div>
     </div>
 
@@ -57,7 +57,7 @@
       <h3 class="text-xl font-bold">Berdasar Dusun</h3>
       <div>
         <div class="flex justify-between text-sm mb-1">
-          <span>Pk Jajang</span><span>1000 Jiwa</span>
+          <span>RW 1</span><span>{{ $infografi->rw['rw1'] }} Jiwa</span>
         </div>
         <div class="w-full bg-gray-200 h-3 rounded-full">
           <div class="bg-green-600 h-3 rounded-full w-[80%]"></div>
@@ -65,7 +65,7 @@
       </div>
       <div>
         <div class="flex justify-between text-sm mb-1">
-          <span>Dusun Berawan Tangi</span><span>2000 Jiwa</span>
+          <span>RW 2</span><span>{{ $infografi->rw['rw2'] }} Jiwa</span>
         </div>
         <div class="w-full bg-gray-200 h-3 rounded-full">
           <div class="bg-blue-600 h-3 rounded-full w-[90%]"></div>
@@ -73,10 +73,34 @@
       </div>
       <div>
         <div class="flex justify-between text-sm mb-1">
-          <span>Dusun Baler Bale Agung</span><span>2000 Jiwa</span>
+          <span>RW 3</span><span>{{ $infografi->rw['rw3'] }}  Jiwa</span>
         </div>
         <div class="w-full bg-gray-200 h-3 rounded-full">
-          <div class="bg-gray-800 h-3 rounded-full w-[30%]"></div>
+          <div class="bg-gray-500 h-3 rounded-full w-[30%]"></div>
+        </div>
+      </div>
+      <div>
+        <div class="flex justify-between text-sm mb-1">
+          <span>RW 4</span><span>{{ $infografi->rw['rw4'] }} Jiwa</span>
+        </div>
+        <div class="w-full bg-gray-200 h-3 rounded-full">
+          <div class="bg-purple-800 h-3 rounded-full w-[30%]"></div>
+        </div>
+      </div>
+      <div>
+        <div class="flex justify-between text-sm mb-1">
+          <span>RW 5</span><span>{{ $infografi->rw['rw5'] }} Jiwa</span>
+        </div>
+        <div class="w-full bg-gray-200 h-3 rounded-full">
+          <div class="bg-yellow-500 h-3 rounded-full w-[30%]"></div>
+        </div>
+      </div>
+      <div>
+        <div class="flex justify-between text-sm mb-1">
+          <span>RW 6</span><span>{{ $infografi->rw['rw6'] }}  Jiwa</span>
+        </div>
+        <div class="w-full bg-gray-200 h-3 rounded-full">
+          <div class="bg-red-500 h-3 rounded-full w-[30%]"></div>
         </div>
       </div>
     </div>
@@ -88,11 +112,12 @@
       <div class="bg-green-600 text-white rounded-lg p-4">
         <h4 class="text-lg font-semibold mb-2">Berdasarkan Agama</h4>
         <ul class="space-y-1 text-sm">
-          <li class="flex justify-between"><span>Islam</span><span>1300</span></li>
-          <li class="flex justify-between"><span>Hindu</span><span>300</span></li>
-          <li class="flex justify-between"><span>Buddha</span><span>10</span></li>
-          <li class="flex justify-between"><span>Konghucu</span><span>0</span></li>
-          <li class="flex justify-between"><span>Kristen</span><span>5</span></li>
+          <li class="flex justify-between"><span>Islam</span><span>{{ $infografi->agama['islam'] }} Jiwa</span></li>
+          <li class="flex justify-between"><span>Kristen</span><span>{{ $infografi->agama['kristen'] }} Jiwa</span></li>
+          <li class="flex justify-between"><span>Hindu</span><span>{{ $infografi->agama['hindu'] }} Jiwa</span></li>
+          <li class="flex justify-between"><span>Buddha</span><span>{{ $infografi->agama['budha'] }} Jiwa</span></li>
+          <li class="flex justify-between"><span>Konghucu</span><span>{{ $infografi->agama['konghucu'] }} Jiwa</span></li>
+
         </ul>
       </div>
 
@@ -100,11 +125,11 @@
       <div class="bg-purple-500 text-white rounded-lg p-4">
         <h4 class="text-lg font-semibold mb-2">Berdasarkan Pendidikan</h4>
         <ul class="space-y-1 text-sm">
-          <li class="flex justify-between"><span>Belum Sekolah</span><span>1300</span></li>
-          <li class="flex justify-between"><span>Tamatan SD</span><span>300</span></li>
-          <li class="flex justify-between"><span>Tamatan SMP</span><span>10</span></li>
-          <li class="flex justify-between"><span>Tamatan SMA</span><span>0</span></li>
-          <li class="flex justify-between"><span>Sarjana</span><span>5</span></li>
+          <li class="flex justify-between"><span>Belum Sekolah</span><span>{{$infografi->pendidikan['belum_sekolah']}}</span></li>
+          <li class="flex justify-between"><span>Tamatan SD</span><span>{{$infografi->pendidikan['tamat_sd']}}</span></li>
+          <li class="flex justify-between"><span>Tamatan SMP</span><span>{{$infografi->pendidikan['tamat_smp']}}</span></li>
+          <li class="flex justify-between"><span>Tamatan SMA</span><span>{{$infografi->pendidikan['tamat_sma']}}</span></li>
+          <li class="flex justify-between"><span>Sarjana</span><span>{{$infografi->pendidikan['sarjana']}}</span></li>
         </ul>
       </div>
 
@@ -117,21 +142,21 @@
               <span class="inline-block w-4 h-4 bg-purple-300 rounded-full"></span>
               <span>Belum Kawin</span>
             </div>
-            <span class="font-bold">1035 Jiwa</span>
+            <span class="font-bold">{{ $infografi->status_perkawinan['belum_kawin'] }} Jiwa</span>
           </li>
           <li class="flex items-center justify-between">
             <div class="flex items-center space-x-2">
               <span class="inline-block w-4 h-4 bg-green-800 rounded-full"></span>
               <span>Kawin</span>
             </div>
-            <span class="font-bold">750 Jiwa</span>
+            <span class="font-bold">{{ $infografi->status_perkawinan['kawin'] }} Jiwa</span>
           </li>
           <li class="flex items-center justify-between">
             <div class="flex items-center space-x-2">
               <span class="inline-block w-4 h-4 bg-pink-400 rounded-full"></span>
               <span>Cerai</span>
             </div>
-            <span class="font-bold">35 Jiwa</span>
+            <span class="font-bold">{{ $infografi->status_perkawinan['cerai'] }} Jiwa</span>
           </li>
         </ul>
       </div>

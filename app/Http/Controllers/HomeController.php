@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Gallery;
 use App\Models\HistoryVillageHead;
+use App\Models\InfoGrafi;
 use App\Models\Layanan;
 use App\Models\News;
 use App\Models\Other;
@@ -63,7 +64,8 @@ class HomeController extends Controller
         return view('front_site.home.profiledesa', compact('villageHead', 'historys', 'profiles'));
     }
     public function infografis(){
-        return view('front_site.home.infografis');
+        $infografi = InfoGrafi::first();
+        return view('front_site.home.infografis', compact('infografi'));
     }
     public function bumdes(){
         return view('front_site.home.bumdes');
