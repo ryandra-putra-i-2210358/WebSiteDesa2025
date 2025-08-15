@@ -74,6 +74,10 @@ Route::middleware(['auth', 'is_admin'])->prefix('admin')->name('admin.')->group(
     Route::get('/messages', [MessageController::class, 'index'])->name('messages.index');
     Route::resource('news', NewsController::class);
     Route::resource('pengumumans', PengumumanController::class);
+    
+    Route::post('infografis/default', [InfoGrafiController::class, 'storeDefault'])
+        ->name('infografis.storeDefault');
+
     Route::resource('layanans', LayananController::class);
     Route::resource('sliders', SliderController::class);
     Route::resource('village_heads', VillageHeadController::class);

@@ -53,57 +53,44 @@
     </div>
 
     {{-- Berdasarkan Dusun --}}
+    @php
+        $data_rw = collect($infografi->rw)
+          ->reject(function($value, $key) {
+              return in_array($key, ['new_key', 'new_value']) || $value === 'new_value';
+          });
+
+        // Pilih salah satu dari dua opsi ini
+
+        // 1️⃣ Max dipatok 10.000
+        $max = 1000;
+
+        // 2️⃣ Max otomatis tapi dibatasi maksimal 10.000
+        // $max = min($data_rw->max(), 10000);
+    @endphp
+
     <div class="space-y-4">
       <h3 class="text-xl font-bold">Berdasar Dusun</h3>
-      <div>
-        <div class="flex justify-between text-sm mb-1">
-          <span>RW 1</span><span>{{ $infografi->rw['rw1'] }} Jiwa</span>
-        </div>
-        <div class="w-full bg-gray-200 h-3 rounded-full">
-          <div class="bg-green-600 h-3 rounded-full w-[80%]"></div>
-        </div>
-      </div>
-      <div>
-        <div class="flex justify-between text-sm mb-1">
-          <span>RW 2</span><span>{{ $infografi->rw['rw2'] }} Jiwa</span>
-        </div>
-        <div class="w-full bg-gray-200 h-3 rounded-full">
-          <div class="bg-blue-600 h-3 rounded-full w-[90%]"></div>
-        </div>
-      </div>
-      <div>
-        <div class="flex justify-between text-sm mb-1">
-          <span>RW 3</span><span>{{ $infografi->rw['rw3'] }}  Jiwa</span>
-        </div>
-        <div class="w-full bg-gray-200 h-3 rounded-full">
-          <div class="bg-gray-500 h-3 rounded-full w-[30%]"></div>
-        </div>
-      </div>
-      <div>
-        <div class="flex justify-between text-sm mb-1">
-          <span>RW 4</span><span>{{ $infografi->rw['rw4'] }} Jiwa</span>
-        </div>
-        <div class="w-full bg-gray-200 h-3 rounded-full">
-          <div class="bg-purple-800 h-3 rounded-full w-[30%]"></div>
-        </div>
-      </div>
-      <div>
-        <div class="flex justify-between text-sm mb-1">
-          <span>RW 5</span><span>{{ $infografi->rw['rw5'] }} Jiwa</span>
-        </div>
-        <div class="w-full bg-gray-200 h-3 rounded-full">
-          <div class="bg-yellow-500 h-3 rounded-full w-[30%]"></div>
-        </div>
-      </div>
-      <div>
-        <div class="flex justify-between text-sm mb-1">
-          <span>RW 6</span><span>{{ $infografi->rw['rw6'] }}  Jiwa</span>
-        </div>
-        <div class="w-full bg-gray-200 h-3 rounded-full">
-          <div class="bg-red-500 h-3 rounded-full w-[30%]"></div>
-        </div>
-      </div>
+      @foreach ($data_rw as $nama => $jumlah)
+          @php
+              $persen = $max > 0 ? ($jumlah / $max) * 100 : 0;
+          @endphp
+          <div>
+              <div class="flex justify-between text-sm mb-1">
+                  <span>{{ strtoupper($nama) }}</span>
+                  <span>{{ $jumlah }} Jiwa</span>
+              </div>
+              <div class="w-full bg-gray-200 h-3 rounded-full">
+                  <div class="bg-green-600 h-3 rounded-full" style="width: {{ $persen }}%"></div>
+              </div>
+              {{-- Info target max biar orang ngerti --}}
+              @if($loop->first)
+                  <div class="text-xs text-gray-500">Skala maksimal: {{ number_format($max) }} jiwa</div>
+              @endif
+          </div>
+      @endforeach
     </div>
+
+
 
     {{-- Agama, Pendidikan, Status --}}
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">

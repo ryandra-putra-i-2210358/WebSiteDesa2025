@@ -10,6 +10,10 @@ class VillageHeadController extends Controller
     public function index()
     {
         $villageHead = VillageHead::first();
+
+        if(!$villageHead){
+            return redirect()->route('back_site.infografis.create');
+        }
         return view('back_site.village_heads.index', compact('villageHead'));
     }
 

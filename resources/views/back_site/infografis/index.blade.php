@@ -14,6 +14,14 @@
         <div class="alert alert-danger">{{ session('error') }}</div>
     @endif
 
+    @php
+        $data_rw = collect($infografi->rw)
+        ->reject(function($value, $key) {
+            return in_array($key, ['new_key', 'new_value']) || $value === 'new_value';
+        });
+
+    @endphp
+
     @if($infografi)
         <table class="table table-bordered">
             <tr>
