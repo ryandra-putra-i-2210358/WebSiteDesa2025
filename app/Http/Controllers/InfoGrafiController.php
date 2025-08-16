@@ -40,37 +40,19 @@ class InfoGrafiController extends Controller
         return view('back_site.infografis.index', compact('infografi'));
     }
 
-    public function create($id)
+    public function create()
     {
         if ($this->hasExistingData()) {
             return redirect()->route('admin.infografis.index')
                 ->with('error', 'Data demografi sudah ada.');
         }
 
-        $infografi = InfoGrafi::findOrFail($id);
-        
-        if ($infografi) {
-            // Filter RW
-            $infografi->rw = collect($infografi->rw)
-                ->reject(function ($value, $key) {
-                    return in_array($key, ['new_key', 'new_value']) || $value === 'new_value';
-                })
-                ->toArray();
-            $infografi->agama = collect($infografi->agama)
-                ->reject(fn($value, $key) => in_array($key, ['new_key', 'new_value']) || $value === 'new_value')
-                ->toArray();
-
-            $infografi->pendidikan = collect($infografi->pendidikan)
-                ->reject(fn($value, $key) => in_array($key, ['new_key', 'new_value']) || $value === 'new_value')
-                ->toArray();
-            $infografi->status_perkawinan = collect($infografi->status_perkawinan)
-                ->reject(fn($value, $key) => in_array($key, ['new_key', 'new_value']) || $value === 'new_value')
-                ->toArray(); 
-        }
-
+        // Kalau mau kasih data kosong (default array), cukup buat instance baru
+        $infografi = new InfoGrafi();
 
         return view('back_site.infografis.create', compact('infografi'));
     }
+
 
     public function store(Request $request)
     {

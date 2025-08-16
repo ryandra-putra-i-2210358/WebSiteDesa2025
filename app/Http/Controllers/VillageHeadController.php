@@ -12,7 +12,7 @@ class VillageHeadController extends Controller
         $villageHead = VillageHead::first();
 
         if(!$villageHead){
-            return redirect()->route('back_site.infografis.create');
+            return redirect()->route('admin.village_heads.create');
         }
         return view('back_site.village_heads.index', compact('villageHead'));
     }

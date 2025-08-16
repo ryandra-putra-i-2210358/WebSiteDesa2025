@@ -29,41 +29,16 @@ class InfoGrafi extends Model
         'status_perkawinan' => 'array',
     ];
 
-    public function isiAja()
-    {
-        $this->agama = [
-            'islam'    => 120,
-            'kristen'  => 50,
-            'hindu'    => 30,
-            'budha'    => 10,
-            'konghucu' => 5,
-        ];
+    protected $attributes = [
+        'total_penduduk' => 0,
+        'kepala_keluarga' => 0,
+        'perempuan' => 0,
+        'laki_laki' => 0,
+        'rw' => '[]',
+        'agama' => '[]',
+        'pendidikan' => '[]',
+        'status_perkawinan' => '[]',
+    ];
 
-        $this->rw = [
-            'rw1' => 200,
-            'rw2' => 150,
-            'rw3' => 32,
-            'rw4' => 32,
-            'rw5' => 32,
-            'rw6' => 32,
-            
-        ];
-
-        $this->pendidikan = [
-            'belum_sekolah' => 300,
-            'tamat_sd'     => 300,
-            'tamat_smp'    => 200,
-            'tamat_sma'    => 100,
-            'sarjana' => 50
-        ];
-
-        $this->status_perkawinan = [
-            'belum_kawin'        => 250,
-            'kawin'  => 150,
-            'cerai' => 34,
-        ];
-
-        return $this;
-    }
 }
 

@@ -46,7 +46,7 @@
             @foreach($rw as $key => $value)
                 <div class="input-group mb-2">
                     <span class="input-group-text">{{ $key }}</span>
-                    <input type="number" name="rw[{{ $key }}]" class="form-control" value="{{ $value }}" placeholder="tidak usah di isi">
+                    <input type="number" name="rw[{{ $key }}]" class="form-control" value="{{ $value }}" >
                 </div>
             @endforeach
         </div>
@@ -58,7 +58,7 @@
             @foreach($agama as $key => $value)
                 <div class="input-group mb-2">
                     <span class="input-group-text">{{ $key }}</span>
-                    <input type="number" name="agama[{{ $key }}]" class="form-control" value="{{ $value }}" placeholder="tidak usah di isi">
+                    <input type="number" name="agama[{{ $key }}]" class="form-control" value="{{ $value }}" >
                 </div>
             @endforeach
         </div>
@@ -70,7 +70,7 @@
             @foreach($pendidikan as $key => $value)
                 <div class="input-group mb-2">
                     <span class="input-group-text">{{ $key }}</span>
-                    <input type="number" name="pendidikan[{{ $key }}]" class="form-control" value="{{ $value }}" placeholder="tidak usah di isi">
+                    <input type="number" name="pendidikan[{{ $key }}]" class="form-control" value="{{ $value }}" >
                 </div>
             @endforeach
         </div>
@@ -82,7 +82,7 @@
             @foreach($status as $key => $value)
                 <div class="input-group mb-2">
                     <span class="input-group-text">{{ $key }}</span>
-                    <input type="number" name="status_perkawinan[{{ $key }}]" class="form-control" value="{{ $value }}" placeholder="tidak usah di isi">
+                    <input type="number" name="status_perkawinan[{{ $key }}]" class="form-control" value="{{ $value }}" >
                 </div>
             @endforeach
         </div>

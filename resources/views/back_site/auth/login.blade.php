@@ -74,7 +74,7 @@
                             <input type="checkbox" class="form-check-input" id="remember" name="remember">
                             <label class="form-check-label" for="remember">Ingat saya</label>
                         </div>
-                        <a href="#" class="text-decoration-none">Lupa Password?</a>
+                        
                     </div>
                     <div class="d-grid">
                         <button type="submit" class="btn btn-primary">Masuk</button>

@@ -36,37 +36,32 @@
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
       <div class="border rounded-lg p-4 bg-green-50">
         <p class="text-sm">Total Penduduk</p>
-        <p class="text-2xl font-bold text-green-700">{{$infografi->total_penduduk}} Jiwa</p>
+        <p class="text-2xl font-bold text-green-700">{{ optional($infografi)->total_penduduk ?? 0 }} Jiwa</p>
       </div>
       <div class="border rounded-lg p-4">
         <p class="text-sm">Kepala Keluarga</p>
-        <p class="text-2xl font-bold text-pink-700">{{$infografi->kepala_keluarga}} Jiwa</p>
+        <p class="text-2xl font-bold text-pink-700">{{ optional($infografi)->kepala_keluarga ?? 0 }} Jiwa</p>
       </div>
       <div class="border rounded-lg p-4">
         <p class="text-sm">Perempuan</p>
-        <p class="text-2xl font-bold text-red-700">{{$infografi->perempuan}} Jiwa</p>
+        <p class="text-2xl font-bold text-red-700">{{ optional($infografi)->perempuan ?? 0 }} Jiwa</p>
       </div>
       <div class="border rounded-lg p-4">
         <p class="text-sm">Laki-laki</p>
-        <p class="text-2xl font-bold text-yellow-700">{{$infografi->laki_laki}} Jiwa</p>
+        <p class="text-2xl font-bold text-yellow-700">{{ optional($infografi)->laki_laki ?? 0 }} Jiwa</p>
       </div>
     </div>
 
     {{-- Berdasarkan Dusun --}}
     @php
-        $data_rw = collect($infografi->rw)
-          ->reject(function($value, $key) {
-              return in_array($key, ['new_key', 'new_value']) || $value === 'new_value';
-          });
+      $data_rw = collect(optional($infografi)->rw ?? [])
+      ->reject(function($value, $key) {
+        return in_array($key, ['new_key', 'new_value']) || $value === 'new_value';
+      });
 
-        // Pilih salah satu dari dua opsi ini
-
-        // 1️⃣ Max dipatok 10.000
-        $max = 1000;
-
-        // 2️⃣ Max otomatis tapi dibatasi maksimal 10.000
-        // $max = min($data_rw->max(), 10000);
+      $max = 5000;
     @endphp
+
 
     <div class="space-y-4">
       <h3 class="text-xl font-bold">Berdasar Dusun</h3>
@@ -99,11 +94,11 @@
       <div class="bg-green-600 text-white rounded-lg p-4">
         <h4 class="text-lg font-semibold mb-2">Berdasarkan Agama</h4>
         <ul class="space-y-1 text-sm">
-          <li class="flex justify-between"><span>Islam</span><span>{{ $infografi->agama['islam'] }} Jiwa</span></li>
-          <li class="flex justify-between"><span>Kristen</span><span>{{ $infografi->agama['kristen'] }} Jiwa</span></li>
-          <li class="flex justify-between"><span>Hindu</span><span>{{ $infografi->agama['hindu'] }} Jiwa</span></li>
-          <li class="flex justify-between"><span>Buddha</span><span>{{ $infografi->agama['budha'] }} Jiwa</span></li>
-          <li class="flex justify-between"><span>Konghucu</span><span>{{ $infografi->agama['konghucu'] }} Jiwa</span></li>
+          <li class="flex justify-between"><span>Islam</span><span>{{ optional($infografi)->agama['islam']?? 0 }} Jiwa</span></li>
+          <li class="flex justify-between"><span>Kristen</span><span>{{ optional($infografi)->agama['kristen']?? 0 }} Jiwa</span></li>
+          <li class="flex justify-between"><span>Hindu</span><span>{{ optional($infografi)->agama['hindu']?? 0 }} Jiwa</span></li>
+          <li class="flex justify-between"><span>Buddha</span><span>{{ optional($infografi)->agama['budha']?? 0 }} Jiwa</span></li>
+          <li class="flex justify-between"><span>Konghucu</span><span>{{ optional($infografi)->agama['konghucu']?? 0 }} Jiwa</span></li>
 
         </ul>
       </div>
@@ -112,11 +107,11 @@
       <div class="bg-purple-500 text-white rounded-lg p-4">
         <h4 class="text-lg font-semibold mb-2">Berdasarkan Pendidikan</h4>
         <ul class="space-y-1 text-sm">
-          <li class="flex justify-between"><span>Belum Sekolah</span><span>{{$infografi->pendidikan['belum_sekolah']}}</span></li>
-          <li class="flex justify-between"><span>Tamatan SD</span><span>{{$infografi->pendidikan['tamat_sd']}}</span></li>
-          <li class="flex justify-between"><span>Tamatan SMP</span><span>{{$infografi->pendidikan['tamat_smp']}}</span></li>
-          <li class="flex justify-between"><span>Tamatan SMA</span><span>{{$infografi->pendidikan['tamat_sma']}}</span></li>
-          <li class="flex justify-between"><span>Sarjana</span><span>{{$infografi->pendidikan['sarjana']}}</span></li>
+          <li class="flex justify-between"><span>Belum Sekolah</span><span>{{ optional($infografi)->pendidikan['belum_sekolah']?? 0 }} Jiwa</span></li>
+          <li class="flex justify-between"><span>Tamatan SD</span><span>{{ optional($infografi)->pendidikan['tamat_sd']?? 0 }} Jiwa</span></li>
+          <li class="flex justify-between"><span>Tamatan SMP</span><span>{{ optional($infografi)->pendidikan['tamat_smp']?? 0 }} Jiwa</span></li>
+          <li class="flex justify-between"><span>Tamatan SMA</span><span>{{ optional($infografi)->pendidikan['tamat_sma']?? 0 }} Jiwa</span></li>
+          <li class="flex justify-between"><span>Sarjana</span><span>{{ optional($infografi)->pendidikan['sarjana']?? 0 }} Jiwa</span></li>
         </ul>
       </div>
 
@@ -129,21 +124,21 @@
               <span class="inline-block w-4 h-4 bg-purple-300 rounded-full"></span>
               <span>Belum Kawin</span>
             </div>
-            <span class="font-bold">{{ $infografi->status_perkawinan['belum_kawin'] }} Jiwa</span>
+            <span class="font-bold">{{ optional($infografi)->status_perkawinan['belum_kawin'] ?? 0 }} Jiwa</span>
           </li>
           <li class="flex items-center justify-between">
             <div class="flex items-center space-x-2">
               <span class="inline-block w-4 h-4 bg-green-800 rounded-full"></span>
               <span>Kawin</span>
             </div>
-            <span class="font-bold">{{ $infografi->status_perkawinan['kawin'] }} Jiwa</span>
+            <span class="font-bold">{{ optional($infografi)->status_perkawinan['kawin']?? 0 }} Jiwa</span>
           </li>
           <li class="flex items-center justify-between">
             <div class="flex items-center space-x-2">
               <span class="inline-block w-4 h-4 bg-pink-400 rounded-full"></span>
               <span>Cerai</span>
             </div>
-            <span class="font-bold">{{ $infografi->status_perkawinan['cerai'] }} Jiwa</span>
+            <span class="font-bold">{{ optional($infografi)->status_perkawinan['cerai']?? 0 }} Jiwa</span>
           </li>
         </ul>
       </div>
