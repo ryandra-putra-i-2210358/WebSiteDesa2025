@@ -1,6 +1,6 @@
 @extends('back_site.layouts.app_admin')
 
-@section('tittle-admin', 'Tambah Gallery')
+@section('tittle-admin', 'Tambah Anggota Bumdes')
 @include('back_site.component.navbar_admin')
 
 @section('main')

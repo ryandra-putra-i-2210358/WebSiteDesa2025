@@ -1,6 +1,6 @@
 @extends('back_site.layouts.app_admin')
 
-@section('tittle-admin', 'Edit Petanian')
+@section('tittle-admin', 'Edit Pertanian')
 @include('back_site.component.navbar_admin')
 
 @section('main')
@@ -12,7 +12,7 @@
             @method('PUT')
 
             <div class="mb-3">
-                <label for="farm" class="form-label">Nama Peternakan</label>
+                <label for="farm" class="form-label">Nama Pertanian</label>
                 <input type="text" name="farm" class="form-control" value="{{ old('farm', $pertanian->farm) }}" required>
             </div>
 
@@ -27,12 +27,12 @@
             </div>
 
             <div class="mb-3">
-                <label for="jenis_pertanian" class="form-label">Jenis Ternak</label>
+                <label for="jenis_pertanian" class="form-label">Jenis Pertanian</label>
                 <input type="text" name="jenis_pertanian" class="form-control" value="{{ old('jenis_pertanian', $pertanian->jenis_pertanian) }}" required>
             </div>
 
             <div class="mb-3">
-                <label for="jumlah_pertanian" class="form-label">Jumlah Ternak</label>
+                <label for="jumlah_pertanian" class="form-label">Jumlah Pertanian</label>
                 <input type="number" name="jumlah_pertanian" class="form-control" value="{{ old('jumlah_pertanian', $pertanian->jumlah_pertanian) }}" required>
             </div>
 

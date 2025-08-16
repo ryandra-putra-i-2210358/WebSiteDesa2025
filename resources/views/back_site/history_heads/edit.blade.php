@@ -1,11 +1,11 @@
 @extends('back_site.layouts.app_admin')
 
-@section('tittle-admin', 'Edit Berita')
+@section('tittle-admin', 'Edit History')
 @include('back_site.component.navbar_admin')
 
 @section('main')
     <div class="container mt-4">
-        <h1 class="mb-4">Edit Berita</h1>
+        <h1 class="mb-4">Edit History</h1>
 
         <form action="{{ route('admin.history_heads.update', $history->id) }}" method="POST" enctype="multipart/form-data">
             @csrf

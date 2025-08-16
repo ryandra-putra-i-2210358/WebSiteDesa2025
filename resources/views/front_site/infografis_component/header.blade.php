@@ -34,19 +34,19 @@
     
     {{-- Jumlah Penduduk dan Kepala Keluarga --}}
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-      <div class="border rounded-lg p-4 bg-green-50">
+      <div class="border rounded-lg p-4 group p-4 border rounded-xl transition transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:border-green-500 duration-300">
         <p class="text-sm">Total Penduduk</p>
         <p class="text-2xl font-bold text-green-700">{{ optional($infografi)->total_penduduk ?? 0 }} Jiwa</p>
       </div>
-      <div class="border rounded-lg p-4">
+      <div class="border rounded-lg p-4 group p-4 border rounded-xl transition transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:border-pink-500 duration-300">
         <p class="text-sm">Kepala Keluarga</p>
         <p class="text-2xl font-bold text-pink-700">{{ optional($infografi)->kepala_keluarga ?? 0 }} Jiwa</p>
       </div>
-      <div class="border rounded-lg p-4">
+      <div class="border rounded-lg p-4 group p-4 border rounded-xl transition transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:border-red-500 duration-300"">
         <p class="text-sm">Perempuan</p>
         <p class="text-2xl font-bold text-red-700">{{ optional($infografi)->perempuan ?? 0 }} Jiwa</p>
       </div>
-      <div class="border rounded-lg p-4">
+      <div class="border rounded-lg p-4 group p-4 border rounded-xl transition transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:border-yellow-500 duration-300">
         <p class="text-sm">Laki-laki</p>
         <p class="text-2xl font-bold text-yellow-700">{{ optional($infografi)->laki_laki ?? 0 }} Jiwa</p>
       </div>
@@ -70,17 +70,17 @@
               $persen = $max > 0 ? ($jumlah / $max) * 100 : 0;
           @endphp
           <div>
-              <div class="flex justify-between text-sm mb-1">
-                  <span>{{ strtoupper($nama) }}</span>
-                  <span>{{ $jumlah }} Jiwa</span>
-              </div>
-              <div class="w-full bg-gray-200 h-3 rounded-full">
-                  <div class="bg-green-600 h-3 rounded-full" style="width: {{ $persen }}%"></div>
-              </div>
-              {{-- Info target max biar orang ngerti --}}
-              @if($loop->first)
-                  <div class="text-xs text-gray-500">Skala maksimal: {{ number_format($max) }} jiwa</div>
-              @endif
+            <div class="flex justify-between text-sm mb-1">
+                <span>{{ strtoupper($nama) }}</span>
+                <span>{{ $jumlah }} Jiwa</span>
+            </div>
+            <div class="w-full bg-gray-200 h-3 rounded-full">
+                <div class="bg-green-600 h-3 rounded-full" style="width: {{ $persen }}%"></div>
+            </div>
+            {{-- Info target max biar orang ngerti --}}
+            @if($loop->first)
+                <div class="text-xs text-gray-500">Skala maksimal: {{ number_format($max) }} jiwa</div>
+            @endif
           </div>
       @endforeach
     </div>
