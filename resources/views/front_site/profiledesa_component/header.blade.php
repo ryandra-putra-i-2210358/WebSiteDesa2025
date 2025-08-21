@@ -33,7 +33,7 @@
             dan pemandangan alam pegunungan yang indah. Selain memiliki berbagai potensi pertanian dan perkebunan yang cukup
             besar, masyarakat Desa Tajur Halang juga menjunjung tinggi nilai gotong royong serta menjaga kearifan lokal yang
             menjadi ciri khas kehidupan desa. Dengan letak geografis yang strategis, desa ini memiliki potensi besar untuk
-            dikembangkan di bidang ekonomi, pariwisata, dan pemberdayaan masyarakat.
+            dikembangkan di bidang Perternakan, Pertanian, UMKM, Wisata, dan Potensi Lainya.
           </p>
           <a href="{{ route('home.potensi')}}"
             class="inline-block px-6 py-3 bg-green-600 hover:bg-green-700 rounded-full font-semibold text-white transition">

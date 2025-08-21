@@ -32,7 +32,7 @@
           <h2 class="text-xl font-semibold text-gray-900">Kirim Pesan</h2>
           {{-- <p class="mt-1 text-sm text-gray-600">Isi formulir berikut. Kami akan membalas secepatnya pada jam kerja.</p> --}}
 
-          <form action="{{ route('messages.store') }}" method="POST" class="mt-6 space-y-5" novalidate>
+          <form id="messageForm" action="{{ route('messages.store') }}" method="POST" class="mt-6 space-y-5" novalidate>
             @csrf
 
             <!-- Honey Pot (anti-bot) -->
@@ -187,3 +187,23 @@
     <p class="text-xs text-gray-500">Form ini dilindungi oleh kebijakan privasi dan tata kelola data Pemerintah Desa Tajur Halang.</p>
   </div> --}}
 </div>
+
+<script>
+  document.getElementById("messageForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // hentikan submit default
+
+    Swal.fire({
+      title: "Apakah Anda yakin?",
+      text: "Pesan ini akan dikirim ke admin.",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Ya, Kirim!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        e.target.submit(); // submit form kalau user pilih "Ya"
+      }
+    });
+  });
+</script>

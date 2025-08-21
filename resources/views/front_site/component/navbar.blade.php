@@ -48,10 +48,10 @@
               </button>
               <div
                 class="absolute right-0 mt-2 w-48 z-50 bg-white rounded-lg shadow-lg ring-1 ring-black/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 origin-top-right">
-                <a href="{{ route('admin.dashboard') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Dashboard Admin</a>
+                <a href="{{ route('admin.dashboard') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:rounded-lg">Dashboard Admin</a>
                 <form action="{{ route('logout') }}" method="POST">
                   @csrf
-                  <button type="submit" class="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-50">Logout</button>
+                  <button type="submit" class="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-50 hover:rounded-lg">Logout</button>
                 </form>
               </div>
             </div>

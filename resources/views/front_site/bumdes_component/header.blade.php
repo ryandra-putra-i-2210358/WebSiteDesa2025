@@ -53,7 +53,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             
             @foreach($bumdess as $bumdes)
-              <div class="flex items-center gap-3 bg-white p-4 rounded-lg shadow mt-5">
+              <div class="flex border items-center gap-3 bg-white p-4 rounded-lg shadow mt-5 hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:border-green-500 duration-300">
                 <img src="{{ asset($bumdes->image)}}" class="w-16 h-16 rounded-full object-cover">
                 <div>
                   <h4 class="font-semibold">{{$bumdes->name}}</h4>
