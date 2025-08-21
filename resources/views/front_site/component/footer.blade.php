@@ -14,33 +14,49 @@
         Kabupaten Bogor, Jawa Barat.
       </p>
       <div class="flex space-x-4">
-        <a href="#" class="hover:text-green-500"><i class="fab fa-x-twitter"></i></a>
-        <a href="#" class="hover:text-green-500"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="hover:text-green-500"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white hover:text-green-500"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" class="text-white hover:text-green-500"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white hover:text-green-500"><i class="fab fa-instagram"></i></a>
+
       </div>
     </div>
 
+    
     <!-- Kontak Desa -->
     <div>
       <h3 class="font-semibold text-lg mb-3">Kontak Desa</h3>
       <ul class="space-y-2">
-        <li><i class="fab fa-whatsapp mr-2 text-green-500"></i>0365 788 899</li>
-        <li><i class="fas fa-envelope mr-2 text-green-500"></i>info@lhpddesa.com</li>
-        <li><i class="fas fa-map-marker-alt mr-2 text-green-500"></i>Google Map</li>
+        <li>
+          <a href="https://wa.me/6281234567890" target="_blank" class="hover:underline">
+            <i class="fab fa-whatsapp mr-2 text-green-500"></i> 0812-3456-7890
+          </a>
+        </li>
+        <li>
+          <a href="mailto:desatajurhalang@gmail.com" class="hover:underline">
+            <i class="fas fa-envelope mr-2 text-green-500"></i> desatajurhalang@gmail.com
+          </a>
+        </li>
+        <li>
+          <a href="https://maps.app.goo.gl/rCAP3bxmHENpec2n8" target="_blank" class="hover:underline">
+            <i class="fas fa-map-marker-alt mr-2 text-green-500"></i> Google Maps
+          </a>
+        </li>
       </ul>
+
       <p class="font-semibold mt-4">Jam Kantor</p>
-      <p>Senin - Kamis (08.00 - 15.00) & Jum'at (08.00 - 11.00)</p>
+      <p>Senin - Jum'at (08.00 - 15.00) & Sabtu - Minggu (Libur) </p>
     </div>
+
 
     <!-- Link Tautan -->
     <div>
       <h3 class="font-semibold text-lg mb-3">Link Tautan</h3>
       <ul class="space-y-2">
-        <li><a href="#" class="hover:text-green-500">Kemendesa</a></li>
-        <li><a href="#" class="hover:text-green-500">Kemendagri</a></li>
-        <li><a href="#" class="hover:text-green-500">BPD Bali</a></li>
-        <li><a href="#" class="hover:text-green-500">RSU Negara</a></li>
-        <li><a href="#" class="hover:text-green-500">Pemkab</a></li>
+        <li><a href="https://kemendesa.go.id/" class="hover:text-green-500" target="_blank">Kemendesa</a></li>
+        <li><a href="https://pelita.kemendagri.go.id/" class="hover:text-green-500" target="_blank">Kemendagri</a></li>
+        <li><a href="https://www.bankbjb.co.id/" class="hover:text-green-500" target="_blank">BPD Jawa Barat</a></li>
+        <li><a href="https://rsud.kotabogor.go.id/" class="hover:text-green-500" target="_blank">RSUD Bogor</a></li>
+        <li><a href="https://bogorkab.go.id/" class="hover:text-green-500" target="_blank">Pemkab</a></li>
       </ul>
     </div>
 

@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+.login-wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+.login-left, .login-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-left {
+    background: #fff;
+    padding: 60px;
+    order: 2; /* default mobile urutan bawah */
+}
+.login-left h3 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.form-control {
+    border-radius: 50px;
+    padding: 14px 20px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 204, 255, 0.3);
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+    width: 500px;
+}
+.form-control:focus {
+    box-shadow: 0 0 15px rgba(0, 204, 255, 0.7);
+}
+.btn-login {
+    border-radius: 50px;
+    padding: 12px;
+    background: linear-gradient(to right, #2563eb, #14b8a6, #10b981);
+    border: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+.btn-login:hover {
+    opacity: 0.9;
+}
+.login-options {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.login-options a {
+    text-decoration: none;
+    color: #0072ff;
+    font-weight: 500;
+}
+.login-right {
+    position: relative;
+    flex: 1;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #2563eb, #14b8a6, #10b981);
+    overflow: hidden;
+    order: 1; /* default mobile urutan atas */
+}
+.login-right::before {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px);
+    background-size: 16px 16px;
+    z-index: 0;
+}
+.login-right * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive */
+@media(min-width: 992px) {
+    body {
+    overflow: hidden;
+    }
+    .login-wrapper {
+    flex-direction: row;
+    }
+    .login-left {
+    order: 1; /* desktop normal: kiri */
+    padding: 60px;
+    }
+    .login-right {
+    order: 2; /* desktop normal: kanan */
+    padding: 40px;
+    }
+}
+
+@media(max-width: 992px) {
+    body {
+    overflow: auto;
+    }
+    .login-wrapper {
+    flex-direction: column;
+    height: auto;
+    }
+    .form-control {
+    width: 400px; /* biar rapi di mobile */
+    }
+}

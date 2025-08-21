@@ -30,7 +30,7 @@
       <section class="lg:col-span-2">
         <div class="bg-white rounded-2xl shadow-sm ring-1 ring-black/5 p-6 sm:p-8">
           <h2 class="text-xl font-semibold text-gray-900">Kirim Pesan</h2>
-          <p class="mt-1 text-sm text-gray-600">Isi formulir berikut. Kami akan membalas secepatnya pada jam kerja.</p>
+          {{-- <p class="mt-1 text-sm text-gray-600">Isi formulir berikut. Kami akan membalas secepatnya pada jam kerja.</p> --}}
 
           <form action="{{ route('messages.store') }}" method="POST" class="mt-6 space-y-5" novalidate>
             @csrf
@@ -45,7 +45,7 @@
               <div>
                 <label for="name" class="block text-sm font-medium text-gray-700">Nama Lengkap <span class="text-red-500">*</span></label>
                 <input type="text" name="name" id="name" value="{{ old('name') }}" required
-                  class="mt-1 block w-full rounded-2xl border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500">
+                  class="mt-1 block w-full  border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500">
                 @error('name')
                   <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                 @enderror
@@ -53,7 +53,7 @@
               <div>
                 <label for="email" class="block text-sm font-medium text-gray-700">Email Aktif <span class="text-red-500">*</span></label>
                 <input type="email" name="email" id="email" value="{{ old('email') }}" required
-                  class="mt-1 block w-full rounded-2xl border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                  class="mt-1 block w-full  border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
                 @error('email')
                   <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                 @enderror
@@ -62,9 +62,9 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
-                <label for="phone" class="block text-sm font-medium text-gray-700">No. WhatsApp</label>
+                <label for="phone" class="block text-sm font-medium text-gray-700">No.HP</label>
                 <input type="tel" name="phone" id="phone" value="{{ old('phone') }}"
-                  class="mt-1 block w-full rounded-2xl border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500" placeholder="08xxxxxxxxxx">
+                  class="mt-1 block w-full  border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500" placeholder="08xxxxxxxxxx">
                 @error('phone')
                   <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                 @enderror
@@ -72,7 +72,7 @@
               <div>
                 <label for="subject" class="block text-sm font-medium text-gray-700">Subjek <span class="text-red-500">*</span></label>
                 <input type="text" name="subject" id="subject" value="{{ old('subject') }}" required
-                  class="mt-1 block w-full rounded-2xl border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500">
+                  class="mt-1 block w-full  border-gray-300 shadow-sm focus:border-teal-500 focus:ring-teal-500">
                 @error('subject')
                   <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                 @enderror
@@ -82,7 +82,7 @@
             <div>
               <label for="message" class="block text-sm font-medium text-gray-700">Pesan <span class="text-red-500">*</span></label>
               <textarea name="message" id="message" rows="6" required
-                class="mt-1 block w-full rounded-2xl border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="Tulis pesan Anda di sini...">{{ old('message') }}</textarea>
+                class="mt-1 block w-full  border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" placeholder="Tulis pesan Anda di sini...">{{ old('message') }}</textarea>
               @error('message')
                 <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
               @enderror
@@ -104,7 +104,7 @@
 
       <!-- Info -->
       <aside class="lg:col-span-1 space-y-8">
-        {{-- <div class="bg-white rounded-2xl shadow-sm ring-1 ring-black/5 p-6 sm:p-7">
+        {{-- <div class="bg-white  shadow-sm ring-1 ring-black/5 p-6 sm:p-7">
           <h3 class="text-lg font-semibold text-gray-900">Kontak Resmi</h3>
           <dl class="mt-4 space-y-3 text-sm text-gray-700">
             <div class="flex gap-3">
