@@ -4,19 +4,25 @@
     <!-- Kiri: Konten Teks -->
     <div class="md:w-1/2">
       <p class="text-green-600 font-semibold tracking-widest uppercase mb-2">Selamat Datang Di</p>
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Desa Tajur Halang.</h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Desa Tajur Halang</h2>
+      
       <p class="text-gray-700 mb-4">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim ligula venenatis velit semper, et viverra leo tempus.
+        Desa Tajur Halang adalah sebuah desa yang kaya akan budaya, gotong royong, serta keindahan alamnya. 
+        Kami berkomitmen untuk terus membangun desa yang maju, sejahtera, dan harmonis bagi seluruh warganya.
       </p>
+      
       <p class="text-gray-700 leading-relaxed text-justify mb-10">
-        Praesent augue dolor, volutpat vitae fermentum at, auctor et lacus. Curabitur sit amet cursus tortor, at pretium odio. 
-        Aliquam est arcu, placerat pretium lectus at, venenatis vestibulum risus. Nam at ornare mi. 
-        Morbi bibendum aliquam purus eu venenatis. Curabitur fringilla est risus, et molestie dui eleifend id.
+        Melalui website ini, kami hadir untuk memberikan informasi yang lebih mudah diakses oleh masyarakat, 
+        baik warga desa maupun para pengunjung. Semoga kehadiran website ini dapat menjadi jembatan komunikasi 
+        yang bermanfaat serta membawa Desa Tajur Halang semakin dikenal luas.
       </p>
-      <a href="{{ route('home.profiledesa')}}" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition duration-300">
-        Lihat Profile Desa
+      
+      <a href="{{ route('home.profiledesa')}}" 
+        class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full shadow-md transition duration-300">
+        Lihat Profil Desa
       </a>
     </div>
+
 
     <!-- Kanan: Gambar -->
     <div class="md:w-1/2">
