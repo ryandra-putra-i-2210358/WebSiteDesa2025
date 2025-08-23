@@ -173,7 +173,7 @@
           <p class="mt-1 text-white/90">Silakan hubungi WhatsApp admin pada jam kerja untuk respon lebih cepat.</p>
         </div>
         <div class="mt-4">
-          <a href="https://wa.me/6281234567890" target="_blank" rel="noopener"
+          <a href="https://wa.me/6285718286482" target="_blank" rel="noopener"
              class="inline-flex items-center justify-center rounded-2xl bg-white/10 backdrop-blur px-5 py-3 text-sm font-semibold ring-1 ring-white/30 hover:bg-white/20">
             Chat WhatsApp Admin
           </a>

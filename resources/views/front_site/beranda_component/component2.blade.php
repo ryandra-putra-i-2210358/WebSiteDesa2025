@@ -26,7 +26,7 @@
 
     <!-- Kanan: Gambar -->
     <div class="md:w-1/2">
-      <img src="{{ asset('img/tanah.jpg') }}" alt="Desa Tukadaya" class="rounded-2xl shadow-lg w-full object-cover">
+      <img src="{{ asset('img/test2.jpg') }}" alt="Desa Tajur Halang" class="rounded-2xl shadow-lg w-full object-cover">
     </div>
 
   </div>

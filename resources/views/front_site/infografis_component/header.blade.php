@@ -59,7 +59,7 @@
         return in_array($key, ['new_key', 'new_value']) || $value === 'new_value';
       });
 
-      $max = 5000;
+      $max = 8000;
     @endphp
 
 

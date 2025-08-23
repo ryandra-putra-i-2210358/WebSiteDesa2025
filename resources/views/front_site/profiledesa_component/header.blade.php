@@ -11,7 +11,7 @@
 
   {{-- Section Tentang Desa --}}
   <div class="max-w-7xl mx-auto px-4 mt-10">
-    <img src="{{ asset('img/tanah.jpg')}}" 
+    <img src="{{ asset('img/ppdesa.JPG')}}" 
       alt="Background Desa"
       class="w-full h-auto max-h-[600px] rounded-t-lg object-cover ">
     <div class="relative overflow-hidden rounded-b-lg mb-8">

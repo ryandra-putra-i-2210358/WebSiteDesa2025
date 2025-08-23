@@ -10,13 +10,13 @@
         </div>
       </div>
       <p class="text-white mb-4 leading-relaxed text-justify">
-        Desa Tajur Halang, Kecamatan CiJeruk,<br>
+        Desa Tajur Halang, Kecamatan Cijeruk,<br>
         Kabupaten Bogor, Jawa Barat.
       </p>
       <div class="flex space-x-4">
-        <a href="#" class="text-white hover:text-green-500"><i class="fab fa-x-twitter"></i></a>
-        <a href="#" class="text-white hover:text-green-500"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="text-white hover:text-green-500"><i class="fab fa-instagram"></i></a>
+        {{-- <a href="#" class="text-white hover:text-green-500"><i class="fab fa-x-twitter"></i></a> --}}
+        <a href="https://web.facebook.com/tajurhalang.tajurhalang.16?_rdc=1&_rdr#" class="text-white hover:text-green-500" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/desatajurhalang/" class="text-white hover:text-green-500" target="_blank"><i class="fab fa-instagram"></i></a>
 
       </div>
     </div>
@@ -27,8 +27,8 @@
       <h3 class="font-semibold text-lg mb-3">Kontak Desa</h3>
       <ul class="space-y-2">
         <li>
-          <a href="https://wa.me/6281234567890" target="_blank" class="hover:underline">
-            <i class="fab fa-whatsapp mr-2 text-green-500"></i> 0812-3456-7890
+          <a href="https://wa.me/6285718286482" target="_blank" class="hover:underline">
+            <i class="fab fa-whatsapp mr-2 text-green-500"></i> 0857-1828-6482
           </a>
         </li>
         <li>
@@ -66,18 +66,31 @@
       <ul class="space-y-4">
         <li>
           <p class="font-semibold">Puskesmas</p>
-          <p><i class="fas fa-phone-alt mr-2 text-green-500"></i>0365 788 899</p>
+          <p>
+            <a href="https://wa.me/6285216651628" target="_blank" class="flex items-center text-green-600 hover:underline">
+              <i class="fas fa-phone-alt mr-2 text-green-500"></i>0852-1665-1628
+            </a>
+          </p>
         </li>
         <li>
-          <p class="font-semibold">Damkar</p>
-          <p><i class="fas fa-phone-alt mr-2 text-green-500"></i>0365 788 000</p>
+          <p class="font-semibold">Posyandu</p>
+          <p>
+            <a href="https://wa.me/6285888263865" target="_blank" class="flex items-center text-green-600 hover:underline">
+              <i class="fas fa-phone-alt mr-2 text-green-500"></i>0858-8826-3865
+            </a>
+          </p>
         </li>
         <li>
           <p class="font-semibold">Ambulans</p>
-          <p><i class="fas fa-phone-alt mr-2 text-green-500"></i>0365 543 200</p>
+          <p>
+            <a href="https://wa.me/6285774371047" target="_blank" class="flex items-center text-green-600 hover:underline">
+              <i class="fas fa-phone-alt mr-2 text-green-500"></i>0857-7437-1047
+            </a>
+          </p>
         </li>
       </ul>
     </div>
+
 
   </div>
 

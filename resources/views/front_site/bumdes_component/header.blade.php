@@ -25,7 +25,7 @@
             Melalui berbagai program, kami berupaya mendorong pertumbuhan ekonomi lokal, menciptakan lapangan kerja, dan menjaga kearifan budaya desa agar tetap lestari di tengah perkembangan zaman.
           </p>
 
-          <img src="{{ asset('img/tanah.jpg')}}" alt="Foto Bumdes" class="rounded-lg shadow">
+          <img src="{{ asset('img/ppdesa.JPG')}}" alt="Foto Bumdes" class="rounded-lg shadow">
         </div>
 
         {{-- Layanan LPD --}}
