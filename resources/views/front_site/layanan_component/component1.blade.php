@@ -1,7 +1,7 @@
 <div class="max-w-6xl mx-auto px-4 py-1 mt-[-30px] mb-20">
   <!-- Gambar & Deskripsi -->
   <div class="mb-8">
-    <img src="{{ asset('img/tanah.jpg') }}" alt="Lembaga Perkreditan Desa" class="rounded-xl shadow-md w-full h-[600px] object-cover mb-10" />
+    <img src="{{ asset('img/ppdesa.JPG') }}" alt="Lembaga Perkreditan Desa" class="rounded-xl shadow-md w-full h-[600px] object-cover mb-10" />
     <p class="mt-6 text-justify text-gray-700 leading-relaxed">
       Pelayanan desa mengacu pada berbagai layanan yang disediakan oleh pemerintah desa kepada penduduk dan masyarakat di wilayah desa. Tujuan utama dari pelayanan desa adalah untuk meningkatkan kesejahteraan masyarakat, memfasilitasi pembangunan di tingkat desa, dan memenuhi kebutuhan dasar penduduk desa. Pelayanan desa mencakup berbagai aspek, seperti pelayanan administratif, sosial, kesehatan, pendidikan, infrastruktur, dan lain-lain. Berikut adalah beberapa contoh pelayanan desa yang umum:
     </p>

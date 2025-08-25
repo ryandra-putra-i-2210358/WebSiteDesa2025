@@ -16,7 +16,7 @@
 
       {{-- CARD 1 --}}
       <a href="{{ route('home.perternakan')}}" class="bg-white rounded-xl shadow border hover:shadow-lg hover:scale-105 hover:border-green-400 hover:bg-green-50 transition duration-300 ease-in-out mt-8 overflow-hidden">
-        <img src="{{ asset('img/perternakan.jpg')}}"
+        <img src="{{ asset('img/perternakan.jpeg')}}"
             alt="Pertanian Desa Tajur Halang"
             class="w-full aspect-[16/9] object-cover transition-transform duration-300 group-hover:scale-105">
         <div class="p-6 flex-1 flex flex-col">
@@ -33,7 +33,7 @@
         </div>
       </a>
       <a href="{{ route('home.pertanian')}}" class="bg-white rounded-xl shadow border hover:shadow-lg hover:scale-105 hover:border-green-400 hover:bg-green-50 transition duration-300 ease-in-out mt-8 overflow-hidden">
-        <img src="{{ asset('img/pertanian.jpg')}}"
+        <img src="{{ asset('img/pertanian.jpeg')}}"
             alt="Pertanian Desa Tajur Halang"
             class="w-full aspect-[16/9] object-cover transition-transform duration-300 group-hover:scale-105">
         <div class="p-6 flex-1 flex flex-col">
